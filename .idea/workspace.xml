@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/first-web-app/LOG_WILDFLY" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +33,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GEEKBRAINS/4-ая четверть/HR" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="profiler.jvm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -101,6 +101,8 @@
       <workItem from="1611855668003" duration="3481000" />
       <workItem from="1611863091693" duration="1285000" />
       <workItem from="1611864408082" duration="694000" />
+      <workItem from="1611946119923" duration="1827000" />
+      <workItem from="1612285813113" duration="125000" />
     </task>
     <task id="LOCAL-00001" summary="Рабочая версия. Заработало только на 8 версии.">
       <created>1611865489517</created>
@@ -133,49 +135,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="Рабочая версия. Заработало только на 8 версии." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="547" y="241" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611865763864">
+    <state x="580" y="189" key="FileChooserDialogImpl" timestamp="1612289301533">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="547" y="241" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1611865763864" />
-    <state x="467" y="29" key="CommitChangelistDialog2" timestamp="1611865487643">
+    <state x="580" y="189" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1612289301533" />
+    <state x="303" y="17" key="SettingsEditor" timestamp="1612373705129">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="467" y="29" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1611865487643" />
-    <state x="580" y="188" key="FileChooserDialogImpl" timestamp="1611865223875">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="580" y="188" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1611865223875" />
-    <state x="612" y="310" key="Github.CreatePullRequestDialog" timestamp="1611865511477">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="612" y="310" key="Github.CreatePullRequestDialog/0.0.1600.860@0.0.1600.860" timestamp="1611865511477" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1611865652551">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1611865652551" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1611865652551">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1611865652551" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1611865652550">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1611865652550" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1611865652551">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1611865652551" />
-    <state x="280" y="8" key="SettingsEditor" timestamp="1611865237958">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="280" y="8" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1611865237958" />
-    <state x="392" y="155" key="Vcs.Push.Dialog.v2" timestamp="1611865493063">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="392" y="155" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1611865493063" />
-    <state x="369" y="160" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1611865413998">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="369" y="160" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1600.860@0.0.1600.860" timestamp="1611865413998" />
+    <state x="303" y="17" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1612373705129" />
   </component>
 </project>
