@@ -4,23 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CardServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CatalogServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ErrorServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/MainServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/MenuHeaderServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/OrderServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ProductServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/TestServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/filter/EncodingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/error.jsp" afterDir="false" />
+    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="ДЗ по 2 уроку">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/FirstServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CardServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CatalogServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CatalogServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/MainServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/MenuHeaderServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/OrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/OrderServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/TestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/TestServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/filter/EncodingFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/target/classes/org/example/FirstServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/error.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app/WEB-INF/classes/org/example/FirstServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/first-web-app/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
@@ -34,23 +31,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson1(servlet)" />
+        <entry key="$PROJECT_DIR$" value="lesson2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubProjectSettings">
-    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="lesson1(servlet)" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="Kuznetsovka" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="JEE" />
   </component>
@@ -64,7 +61,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../trueshop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -73,29 +70,34 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Java\Java-EE\first-web-app\src\main\java\org\example\persist" />
+      <recent name="C:\Java\Java-EE\first-web-app\src\main\webapp\WEB-INF" />
       <recent name="C:\Java\Java-EE\first-web-app\src\main\java\org\example" />
       <recent name="C:\Users\Кирил\IdeaProjects\Java-EE2\.idea" />
       <recent name="C:\Users\Кирил\IdeaProjects\Java-EE2\first-web-app\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Java\Java-EE\first-web-app\src\main\webapp" />
       <recent name="C:\Java\Java-EE\first-web-app\src\main\webapp\WEB-INF" />
+      <recent name="C:\Java\Java-EE\first-web-app\src\main\webapp" />
       <recent name="C:\Java\Java-EE\first-web-app\src\main\java" />
       <recent name="C:\Java\Java-EE\first-web-app\src\main\java\org\example" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.persist" />
       <recent name="org.example" />
       <recent name="org.example.filter" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,7 +159,8 @@
       <workItem from="1611864408082" duration="694000" />
       <workItem from="1611946119923" duration="1827000" />
       <workItem from="1612285813113" duration="125000" />
-      <workItem from="1612374078177" duration="8565000" />
+      <workItem from="1612374078177" duration="9641000" />
+      <workItem from="1613067063891" duration="5618000" />
     </task>
     <task id="LOCAL-00001" summary="Рабочая версия. Заработало только на 8 версии.">
       <created>1611865489517</created>
@@ -180,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612374030737</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ДЗ по 2 уроку">
+      <created>1612463997259</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612463997260</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +211,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Рабочая версия. Заработало только на 8 версии." />
     <MESSAGE value="Работа на 11, после смены JAVA_HOME" />
-    <option name="LAST_COMMIT_MESSAGE" value="Работа на 11, после смены JAVA_HOME" />
+    <MESSAGE value="ДЗ по 2 уроку" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ по 2 уроку" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product.jsp</url>
+          <line>110</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

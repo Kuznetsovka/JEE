@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = {"/true-shop/order"})
+@WebServlet(urlPatterns = {"/order"})
 public class OrderServlet extends HttpServlet {
 
     @Override
