@@ -4,24 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="ДЗ по 2 уроку">
+    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Предварительный коммит">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CardServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CatalogServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CatalogServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/MainServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/MenuHeaderServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/OrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/OrderServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/TestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/TestServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/filter/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/menu.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product_form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user_form.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/first-web-app/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -70,14 +61,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Java\Java-EE\first-web-app\src\main\java\org\example\persist" />
       <recent name="C:\Java\Java-EE\first-web-app\src\main\webapp\WEB-INF" />
+      <recent name="C:\Java\Java-EE\first-web-app\src\main\java\org\example\persist" />
       <recent name="C:\Java\Java-EE\first-web-app\src\main\java\org\example" />
       <recent name="C:\Users\Кирил\IdeaProjects\Java-EE2\.idea" />
       <recent name="C:\Users\Кирил\IdeaProjects\Java-EE2\first-web-app\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Java\Java-EE\first-web-app\src\main\webapp\WEB-INF" />
+      <recent name="C:\Java\Java-EE\first-web-app\src\main\webapp\WEB-INF\fragment" />
       <recent name="C:\Java\Java-EE\first-web-app\src\main\webapp" />
       <recent name="C:\Java\Java-EE\first-web-app\src\main\java" />
       <recent name="C:\Java\Java-EE\first-web-app\src\main\java\org\example" />
@@ -219,7 +211,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product.jsp</url>
-          <line>110</line>
+          <line>77</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
