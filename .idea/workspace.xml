@@ -5,15 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CardServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CatalogServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ErrorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/MainServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/MenuHeaderServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/OrderServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/TestServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/filter/EncodingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/error.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app/WEB-INF/classes/org/example/FirstServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/first-web-app/WEB-INF/classes/org/example/FirstServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/FirstServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/target/classes/org/example/FirstServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app/WEB-INF/classes/org/example/FirstServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/first-web-app/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="Class" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lesson1(servlet)" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubProjectSettings">
@@ -31,7 +64,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GEEKBRAINS/4-ая четверть/HR" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../trueshop" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -39,11 +73,33 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Java\Java-EE\first-web-app\src\main\java\org\example" />
       <recent name="C:\Users\Кирил\IdeaProjects\Java-EE2\.idea" />
       <recent name="C:\Users\Кирил\IdeaProjects\Java-EE2\first-web-app\src\main" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Java\Java-EE\first-web-app\src\main\webapp" />
+      <recent name="C:\Java\Java-EE\first-web-app\src\main\webapp\WEB-INF" />
+      <recent name="C:\Java\Java-EE\first-web-app\src\main\java" />
+      <recent name="C:\Java\Java-EE\first-web-app\src\main\java\org\example" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
+      <recent name="org.example.filter" />
+    </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="first-web-app" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -84,7 +140,7 @@
       </list>
     </option>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -101,6 +157,7 @@
       <workItem from="1611864408082" duration="694000" />
       <workItem from="1611946119923" duration="1827000" />
       <workItem from="1612285813113" duration="125000" />
+      <workItem from="1612374078177" duration="8565000" />
     </task>
     <task id="LOCAL-00001" summary="Рабочая версия. Заработало только на 8 версии.">
       <created>1611865489517</created>
@@ -116,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612373807929</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Работа на 11, после смены JAVA_HOME">
+      <created>1612374030737</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612374030737</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,51 +191,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Рабочая версия. Заработало только на 8 версии." />
     <MESSAGE value="Работа на 11, после смены JAVA_HOME" />
     <option name="LAST_COMMIT_MESSAGE" value="Работа на 11, после смены JAVA_HOME" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="467" y="29" key="CommitChangelistDialog2" timestamp="1612373805545">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="467" y="29" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1612373805545" />
-    <state x="580" y="189" key="FileChooserDialogImpl" timestamp="1612289301533">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="580" y="189" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1612289301533" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1612374017377">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1612374017377" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1612374017377">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1612374017377" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1612374017377">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1612374017377" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1612374017377">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1612374017377" />
-    <state x="303" y="17" key="SettingsEditor" timestamp="1612373705129">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="303" y="17" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1612373705129" />
-    <state x="392" y="155" key="Vcs.Push.Dialog.v2" timestamp="1612373811579">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="392" y="155" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1612373811579" />
   </component>
 </project>

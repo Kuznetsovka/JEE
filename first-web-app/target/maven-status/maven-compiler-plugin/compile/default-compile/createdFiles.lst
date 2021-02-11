@@ -1,1 +1,9 @@
-org\example\FirstServlet.class
+org\example\MenuHeaderServlet.class
+org\example\ErrorServlet.class
+org\example\TestServlet.class
+org\example\CatalogServlet.class
+org\example\filter\EncodingFilter.class
+org\example\OrderServlet.class
+org\example\ProductServlet.class
+org\example\MainServlet.class
+org\example\CardServlet.class
