@@ -11,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Bucket {
+public class Bucket implements Entities {
 
     private Long id;
 

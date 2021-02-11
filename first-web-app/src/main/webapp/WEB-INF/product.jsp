@@ -15,11 +15,41 @@
 </head>
 
 <body>
+<nav id="nav-menu" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">TrueShop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href=<%=getServletContext().getContextPath()%>/main>Main</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href=<%=getServletContext().getContextPath()%>/user>User</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href=<%= getServletContext().getContextPath()%>/catalog>Catalog</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href=<%= getServletContext().getContextPath()%>/product>Product</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href=<%= getServletContext().getContextPath()%>/order>Order</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href=<%=getServletContext().getContextPath()%>/card>Card</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <div class="container">
     <div class="row py-2">
         <div class="col-12">
-            <a class="btn btn-primary" href="product_form.jsp">Add Product</a>
+            <a class="btn btn-primary" href="product/create">Add Product</a>
         </div>
 
         <div class="col-12">
@@ -58,7 +88,10 @@
                             <c:param name="id" value="${product.id}"/>
                         </c:url>
                         <a class="btn btn-success" href="${productEditUrl}"><i class="fas fa-edit"></i></a>
-                        <a class="btn btn-danger" href="#"><i class="far fa-trash-alt"></i></a>
+                        <c:url value="/product/delete" var="productDeleteUrl">
+                            <c:param name="id" value="${product.id}"/>
+                        </c:url>
+                        <a class="btn btn-danger" href="${productDeleteUrl}"><i class="far fa-trash-alt"></i></a>
                     </td>
                 </tr>
 <%--                <% } %>--%>

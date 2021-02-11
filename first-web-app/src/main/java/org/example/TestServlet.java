@@ -10,6 +10,6 @@ public class TestServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        throw new ArithmeticException();
+        throw new ArithmeticException("");
     }
 }

@@ -9,13 +9,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class User {
+public class User implements Entities {
 
     private Long id;
     private String name;
     private String password;
     private String email;
-    private boolean archive = false;
+    private boolean archive;
     private Role role;
     private Bucket bucket;
 

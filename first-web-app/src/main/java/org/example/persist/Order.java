@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Order {
+public class Order implements Entities {
     private static final String SEQ_NAME = "order_seq";
 
     private Long id;

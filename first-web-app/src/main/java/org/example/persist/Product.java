@@ -10,16 +10,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Product {
+public class Product implements Entities {
 
     private Long id;
-
     private String name;
-
     private String description;
-
     private Category category;
-
     private BigDecimal price;
 
     public Product(Long id, String name, String description, BigDecimal price) {

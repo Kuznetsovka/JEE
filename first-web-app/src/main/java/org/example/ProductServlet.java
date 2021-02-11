@@ -1,7 +1,7 @@
 package org.example;
 
 import org.example.persist.Product;
-import org.example.persist.ProductRepository;
+import org.example.persist.Repository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,11 +18,11 @@ public class ProductServlet extends HttpServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(ProductServlet.class);
 
-    private ProductRepository productRepository;
+    private Repository<Product> productRepository;
 
     @Override
     public void init() throws ServletException {
-        this.productRepository = (ProductRepository) getServletContext().getAttribute("productRepository");
+        this.productRepository = (Repository) getServletContext().getAttribute("productRepository");
         if (productRepository == null) {
             throw new ServletException("ProductRepository not initialized");
         }
@@ -31,27 +31,44 @@ public class ProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info(req.getPathInfo());
+        long id;
         if (req.getPathInfo() == null || req.getPathInfo().equals("/")) {
             req.setAttribute("products", productRepository.findAll());
             getServletContext().getRequestDispatcher("/WEB-INF/product.jsp").forward(req, resp);
         } else if (req.getPathInfo().equals("/edit")) {
-            long id;
-            try {
-                id = Long.parseLong(req.getParameter("id"));
-            } catch (NumberFormatException ex) {
-                resp.setStatus(400);
-                return;
-            }
-            Product product = productRepository.findById(id);
-            if (product == null) {
-                resp.setStatus(404);
-                return;
-            }
+            Product product = checkById(req, resp);
+            if (product == null) return;
+            req.setAttribute("product", product);
+            getServletContext().getRequestDispatcher("/WEB-INF/product_form.jsp").forward(req, resp);
+        } else if (req.getPathInfo().equals("/create")) {
+            Product product = new Product();
+            productRepository.saveOrUpdate(product);
             req.setAttribute("product", product);
             getServletContext().getRequestDispatcher("/WEB-INF/product_form.jsp").forward(req, resp);
         } else if (req.getPathInfo().equals("/delete")) {
-            // TODO delete product
+            Product product = checkById(req, resp);
+            if (product == null) return;
+            req.setAttribute("product", product);
+            id = Long.parseLong(req.getParameter("id"));
+            productRepository.deleteById(id);
+            resp.sendRedirect(getServletContext().getContextPath() + "/product");
         }
+    }
+
+    private Product checkById(HttpServletRequest req, HttpServletResponse resp) {
+        long id;
+        try {
+            id = Long.parseLong(req.getParameter("id"));
+        } catch (NumberFormatException ex) {
+            resp.setStatus(400);
+            return null;
+        }
+        Product product = productRepository.findById(id);
+        if (product == null) {
+            resp.setStatus(404);
+            return null;
+        }
+        return product;
     }
 
     @Override
