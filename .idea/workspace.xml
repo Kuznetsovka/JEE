@@ -4,26 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Предварительный коммит">
-      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/Repository.java" afterDir="false" />
+    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Рабочий вариант. С юзерами.">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/TestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/TestServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/listener/BootstrapListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/listener/BootstrapListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/Bucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/Bucket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/OrderDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/OrderDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/ProductRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user_form.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +33,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubProjectSettings">
-    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="lesson1(servlet)" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="lesson2" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="Kuznetsovka" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="JEE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
@@ -95,19 +82,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="first-web-app" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -167,6 +141,7 @@
       <workItem from="1612285813113" duration="125000" />
       <workItem from="1612374078177" duration="9641000" />
       <workItem from="1613067063891" duration="5618000" />
+      <workItem from="1613109337040" duration="1580000" />
     </task>
     <task id="LOCAL-00001" summary="Рабочая версия. Заработало только на 8 версии.">
       <created>1611865489517</created>
@@ -196,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612463997260</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Рабочий вариант. С юзерами.">
+      <created>1613082768697</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613082768698</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +200,8 @@
     <MESSAGE value="Рабочая версия. Заработало только на 8 версии." />
     <MESSAGE value="Работа на 11, после смены JAVA_HOME" />
     <MESSAGE value="ДЗ по 2 уроку" />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ по 2 уроку" />
+    <MESSAGE value="Рабочий вариант. С юзерами." />
+    <option name="LAST_COMMIT_MESSAGE" value="Рабочий вариант. С юзерами." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
