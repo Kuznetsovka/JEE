@@ -34,27 +34,48 @@ public class UserServlet extends HttpServlet {
         resp.getWriter().println(userRepository);
         logger.info(req.getPathInfo());
         long id;
-        if (req.getPathInfo() == null || req.getPathInfo().equals("/")) {
-            req.setAttribute("users", userRepository.findAll());
-            getServletContext().getRequestDispatcher("/WEB-INF/user.jsp").forward(req, resp);
-        } else if (req.getPathInfo().equals("/edit")) {
-            User user = checkById(req, resp);
-            if (user == null) return;
-            req.setAttribute("user", user);
-            getServletContext().getRequestDispatcher("/WEB-INF/user_form.jsp").forward(req, resp);
-        } else if (req.getPathInfo().equals("/create")) {
-            User user = new User();
-            userRepository.saveOrUpdate(user);
-            req.setAttribute("user", user);
-            getServletContext().getRequestDispatcher("/WEB-INF/user_form.jsp").forward(req, resp);
-        } else if (req.getPathInfo().equals("/delete")) {
-            User user = checkById(req, resp);
-            if (user == null) return;
-            req.setAttribute("user", user);
-            id = Long.parseLong(req.getParameter("id"));
-            userRepository.deleteById(id);
-            resp.sendRedirect(getServletContext().getContextPath() + "/user");
+        switch (req.getPathInfo()){
+            case ("/edit"): {
+                getEditProduct(req, resp);
+                break;
+            }
+            case("/create"): {
+                getCreateProduct(req, resp);
+                break;
+            }
+            case("/delete"):{
+                getDeleteProduct(req, resp);
+                break;
+            }
+            default: {
+                req.setAttribute("users", userRepository.findAll());
+                getServletContext().getRequestDispatcher("/WEB-INF/user.jsp").forward(req, resp);
+            }
         }
+    }
+
+    private void getDeleteProduct(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        long id;
+        User user = checkById(req, resp);
+        if (user == null) return;
+        req.setAttribute("user", user);
+        id = Long.parseLong(req.getParameter("id"));
+        userRepository.deleteById(id);
+        resp.sendRedirect(getServletContext().getContextPath() + "/user");
+    }
+
+    private void getCreateProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        User user = new User();
+        userRepository.saveOrUpdate(user);
+        req.setAttribute("user", user);
+        getServletContext().getRequestDispatcher("/WEB-INF/user_form.jsp").forward(req, resp);
+    }
+
+    private void getEditProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        User user = checkById(req, resp);
+        if (user == null) return;
+        req.setAttribute("user", user);
+        getServletContext().getRequestDispatcher("/WEB-INF/user_form.jsp").forward(req, resp);
     }
 
     private User checkById(HttpServletRequest req, HttpServletResponse resp) {
