@@ -35,24 +35,45 @@ public class ProductServlet extends HttpServlet {
         if (req.getPathInfo() == null || req.getPathInfo().equals("/")) {
             req.setAttribute("products", productRepository.findAll());
             getServletContext().getRequestDispatcher("/WEB-INF/product.jsp").forward(req, resp);
-        } else if (req.getPathInfo().equals("/edit")) {
-            Product product = checkById(req, resp);
-            if (product == null) return;
-            req.setAttribute("product", product);
-            getServletContext().getRequestDispatcher("/WEB-INF/product_form.jsp").forward(req, resp);
-        } else if (req.getPathInfo().equals("/create")) {
-            Product product = new Product();
-            productRepository.saveOrUpdate(product);
-            req.setAttribute("product", product);
-            getServletContext().getRequestDispatcher("/WEB-INF/product_form.jsp").forward(req, resp);
-        } else if (req.getPathInfo().equals("/delete")) {
-            Product product = checkById(req, resp);
-            if (product == null) return;
-            req.setAttribute("product", product);
-            id = Long.parseLong(req.getParameter("id"));
-            productRepository.deleteById(id);
-            resp.sendRedirect(getServletContext().getContextPath() + "/product");
         }
+        switch (req.getPathInfo()) {
+            case ("/edit"): {
+                getEditProduct(req, resp);
+                break;
+            }
+            case ("/create"): {
+                getCreateProduct(req, resp);
+                break;
+            }
+            case ("/delete"): {
+                getDeleteProduct(req, resp);
+                break;
+            }
+        }
+    }
+
+    private void getDeleteProduct(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        long id;
+        Product product = checkById(req, resp);
+        if (product == null) return;
+        req.setAttribute("product", product);
+        id = Long.parseLong(req.getParameter("id"));
+        productRepository.deleteById(id);
+        resp.sendRedirect(getServletContext().getContextPath() + "/product");
+    }
+
+    private void getCreateProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Product product = new Product();
+        productRepository.saveOrUpdate(product);
+        req.setAttribute("product", product);
+        getServletContext().getRequestDispatcher("/WEB-INF/product_form.jsp").forward(req, resp);
+    }
+
+    private void getEditProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Product product = checkById(req, resp);
+        if (product == null) return;
+        req.setAttribute("product", product);
+        getServletContext().getRequestDispatcher("/WEB-INF/product_form.jsp").forward(req, resp);
     }
 
     private Product checkById(HttpServletRequest req, HttpServletResponse resp) {

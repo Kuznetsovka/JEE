@@ -1,6 +1,5 @@
 package org.example;
 
-import org.example.persist.Product;
 import org.example.persist.Repository;
 import org.example.persist.Role;
 import org.example.persist.User;
@@ -33,28 +32,27 @@ public class UserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().println(userRepository);
         logger.info(req.getPathInfo());
-        long id;
+        if (req.getPathInfo() == null || req.getPathInfo().equals("/")) {
+            req.setAttribute("users", userRepository.findAll());
+            getServletContext().getRequestDispatcher("/WEB-INF/user.jsp").forward(req, resp);
+        }
         switch (req.getPathInfo()){
             case ("/edit"): {
-                getEditProduct(req, resp);
+                getEditUser(req, resp);
                 break;
             }
             case("/create"): {
-                getCreateProduct(req, resp);
+                getCreateUser(req, resp);
                 break;
             }
             case("/delete"):{
-                getDeleteProduct(req, resp);
+                getDeleteUser(req, resp);
                 break;
-            }
-            default: {
-                req.setAttribute("users", userRepository.findAll());
-                getServletContext().getRequestDispatcher("/WEB-INF/user.jsp").forward(req, resp);
             }
         }
     }
 
-    private void getDeleteProduct(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    private void getDeleteUser(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         long id;
         User user = checkById(req, resp);
         if (user == null) return;
@@ -64,14 +62,14 @@ public class UserServlet extends HttpServlet {
         resp.sendRedirect(getServletContext().getContextPath() + "/user");
     }
 
-    private void getCreateProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    private void getCreateUser(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = new User();
         userRepository.saveOrUpdate(user);
         req.setAttribute("user", user);
         getServletContext().getRequestDispatcher("/WEB-INF/user_form.jsp").forward(req, resp);
     }
 
-    private void getEditProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    private void getEditUser(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = checkById(req, resp);
         if (user == null) return;
         req.setAttribute("user", user);
