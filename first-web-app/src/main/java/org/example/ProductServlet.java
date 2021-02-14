@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.persist.Category;
 import org.example.persist.Product;
 import org.example.persist.Repository;
 import org.slf4j.Logger;
@@ -19,10 +20,12 @@ public class ProductServlet extends HttpServlet {
     private static final Logger logger = LoggerFactory.getLogger(ProductServlet.class);
 
     private Repository<Product> productRepository;
+    private Repository<Category> categoryRepository;
 
     @Override
     public void init() throws ServletException {
         this.productRepository = (Repository) getServletContext().getAttribute("productRepository");
+        this.categoryRepository = (Repository) getServletContext().getAttribute("categoryRepository");
         if (productRepository == null) {
             throw new ServletException("ProductRepository not initialized");
         }
@@ -65,15 +68,19 @@ public class ProductServlet extends HttpServlet {
     private void getCreateProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Product product = new Product();
         productRepository.saveOrUpdate(product);
+        redirectProductForm(req, resp, product);
+    }
+
+    private void redirectProductForm(HttpServletRequest req, HttpServletResponse resp, Product product) throws ServletException, IOException {
         req.setAttribute("product", product);
+        req.setAttribute("categories", categoryRepository.findAll());
         getServletContext().getRequestDispatcher("/WEB-INF/product_form.jsp").forward(req, resp);
     }
 
     private void getEditProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Product product = checkById(req, resp);
         if (product == null) return;
-        req.setAttribute("product", product);
-        getServletContext().getRequestDispatcher("/WEB-INF/product_form.jsp").forward(req, resp);
+        redirectProductForm(req, resp, product);
     }
 
     private Product checkById(HttpServletRequest req, HttpServletResponse resp) {
@@ -108,7 +115,8 @@ public class ProductServlet extends HttpServlet {
             resp.setStatus(400);
             return;
         }
-        Product product = new Product(id, req.getParameter("name"), req.getParameter("description"), price);
+        Category category = categoryRepository.findById(Long.valueOf(req.getParameter("categoryId")));
+        Product product = new Product(id, req.getParameter("name"), req.getParameter("description"), category,price);
         productRepository.saveOrUpdate(product);
         resp.sendRedirect(getServletContext().getContextPath() + "/product");
     }

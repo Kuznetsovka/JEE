@@ -31,7 +31,7 @@
                 <a class="nav-link" href=<%=getServletContext().getContextPath()%>/user>User</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href=<%= getServletContext().getContextPath()%>/catalog>Catalog</a>
+                <a class="nav-link" href=<%= getServletContext().getContextPath()%>/category>Catalog</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href=<%= getServletContext().getContextPath()%>/product>Product</a>
@@ -59,29 +59,28 @@
                     <th scope="col">Id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Description</th>
+                    <th scope="col">Category</th>
                     <th scope="col">Price</th>
                     <th scope="col">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
                 <c:forEach var="product" items="${requestScope.products}">
-<%--                <% for (Product product : (List<Product>) request.getAttribute("products")) { %>--%>
                 <tr>
                     <th scope="row">
                         <c:out value="${product.id}"/>
-<%--                        <%= product.getId() %>--%>
                     </th>
                     <td>
                         <c:out value="${product.name}"/>
-<%--                        <%= product.getName() %>--%>
                     </td>
                     <td>
                         <c:out value="${product.description}"/>
-<%--                        <%= product.getDescription() %>--%>
                     </td>
-                    <td>$
+                    <td>
+                        <c:out value="${product.category.title}"/>
+                    </td>
+                    <td>
                         <c:out value="${product.price}"/>
-<%--                        <%= product.getPrice() %>--%>
                     </td>
                     <td>
                         <c:url value="/product/edit" var="productEditUrl">
@@ -94,7 +93,6 @@
                         <a class="btn btn-danger" href="${productDeleteUrl}"><i class="far fa-trash-alt"></i></a>
                     </td>
                 </tr>
-<%--                <% } %>--%>
                 </c:forEach>
                 </tbody>
             </table>

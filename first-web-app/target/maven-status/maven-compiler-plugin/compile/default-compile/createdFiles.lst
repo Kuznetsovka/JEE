@@ -19,7 +19,7 @@ org\example\persist\Order.class
 org\example\persist\Bucket.class
 org\example\OrderServlet.class
 org\example\persist\OrderDetails$OrderDetailsBuilder.class
+org\example\CategoryServlet.class
 org\example\persist\Repository.class
 org\example\persist\OrderStatus.class
-org\example\CatalogServlet.class
 org\example\persist\Role.class

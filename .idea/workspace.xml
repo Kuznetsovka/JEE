@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="refactoring">
+    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="correct refactoring">
+      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CategoryServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/category.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/CatalogServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/listener/BootstrapListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/listener/BootstrapListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product_form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -156,7 +165,7 @@
       <workItem from="1613067063891" duration="5618000" />
       <workItem from="1613109337040" duration="1580000" />
       <workItem from="1613285699730" duration="292000" />
-      <workItem from="1613305010308" duration="3217000" />
+      <workItem from="1613305010308" duration="11836000" />
     </task>
     <task id="LOCAL-00001" summary="Рабочая версия. Заработало только на 8 версии.">
       <created>1611865489517</created>
@@ -207,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613307862824</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="correct refactoring">
+      <created>1613309457042</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613309457042</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,15 +248,21 @@
     <MESSAGE value="Рабочий вариант. С юзерами." />
     <MESSAGE value="UTF-8" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="correct refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="correct refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product.jsp</url>
-          <line>110</line>
+          <line>108</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/first-web-app/src/main/java/org/example/CategoryServlet.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

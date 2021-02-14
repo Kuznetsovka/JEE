@@ -15,10 +15,8 @@
 </head>
 
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">EShop</a>
-
+<nav id="nav-menu" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">TrueShop</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -27,7 +25,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">List</a>
+                <a class="nav-link" href=<%=getServletContext().getContextPath()%>/main>Main</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href=<%=getServletContext().getContextPath()%>/user>User</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href=<%= getServletContext().getContextPath()%>/category>Catalog</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href=<%= getServletContext().getContextPath()%>/product>Product</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href=<%= getServletContext().getContextPath()%>/order>Order</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href=<%=getServletContext().getContextPath()%>/card>Card</a>
             </li>
         </ul>
     </div>
@@ -36,31 +49,26 @@
 <div class="container">
     <div class="row py-2">
         <div class="col-12">
-            <c:url value="/product" var="productSubmitUrl"/>
-            <form action="${productSubmitUrl}" method="post">
-                <input type="hidden" id="id" name="id" value="${product.id}">
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" class="form-control" id="name" name="name" value="${product.name}" placeholder="Enter name">
-                </div>
-                <div class="form-group">
-                    <label>Description</label>
-                    <input type="text" class="form-control" id="description" name="description" value="${product.description}" placeholder="Enter description">
-                </div>
-                <div class="form-group">
-                    <label>Category</label>
-                    <select class="form-select" id="categoryId" name="categoryId">
-                        <c:forEach items="${categories}" var="category">
-                            <option value="${category.id}" ${category == param.category ? 'selected' : ''}>${category.title}</option>
-                        </c:forEach>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Price</label>
-                    <input type="number" class="form-control" id="price" name="price" value="${product.price}" placeholder="Enter price">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            <table class="table table-bordered my-2">
+                <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="category" items="${requestScope.categories}">
+                <tr>
+                    <th scope="row">
+
+                        <c:url value="/category/get" var="categoryById">
+                            <c:param name="id" value="${category.id}"/>
+                        </c:url>
+                        <a href="${categoryById}"><c:out value="${category.title}"/></a>
+                    </th>
+                </tr>
+                </c:forEach>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
@@ -76,5 +84,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
 </body>
+</html>

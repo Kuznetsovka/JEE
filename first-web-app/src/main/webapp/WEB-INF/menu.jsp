@@ -21,7 +21,7 @@
                 <a class="nav-link" href=<%=getServletContext().getContextPath()%>/user>User</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href=<%= getServletContext().getContextPath()%>/catalog>Catalog</a>
+                <a class="nav-link" href=<%= getServletContext().getContextPath()%>/category>Catalog</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href=<%= getServletContext().getContextPath()%>/product>Product</a>
