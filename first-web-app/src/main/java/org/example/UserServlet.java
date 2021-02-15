@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.persist.Category;
 import org.example.persist.Repository;
 import org.example.persist.Role;
 import org.example.persist.User;
@@ -19,10 +20,12 @@ public class UserServlet extends HttpServlet {
     private static final Logger logger = LoggerFactory.getLogger(UserServlet.class);
 
     private Repository<User> userRepository;
+    private Repository<Category> categoryRepository;
 
     @Override
     public void init() throws ServletException {
         this.userRepository = (Repository) getServletContext().getAttribute("userRepository");
+        this.categoryRepository = (Repository) getServletContext().getAttribute("categoryRepository");
         if (userRepository == null) {
             throw new ServletException("UserRepository not initialized");
         }
@@ -34,6 +37,7 @@ public class UserServlet extends HttpServlet {
         logger.info(req.getPathInfo());
         if (req.getPathInfo() == null || req.getPathInfo().equals("/")) {
             req.setAttribute("users", userRepository.findAll());
+            req.setAttribute("categories", categoryRepository.findAll());
             getServletContext().getRequestDispatcher("/WEB-INF/user.jsp").forward(req, resp);
         }
         switch (req.getPathInfo()){

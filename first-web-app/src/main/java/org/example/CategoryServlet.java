@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@WebServlet(urlPatterns = {"/category/*"})
+@WebServlet(urlPatterns = {"/product/category/*"})
 public class CategoryServlet extends HttpServlet {
 
     private Repository<Category> categoryRepository;
@@ -31,13 +31,11 @@ public class CategoryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         long id;
-        if (req.getPathInfo() == null || req.getPathInfo().equals("/")) {
-            req.setAttribute("categories", categoryRepository.findAll());
-            getServletContext().getRequestDispatcher("/WEB-INF/category.jsp").forward(req, resp);
-        }
         Category category = checkById(req, resp);
-        if (category == null) return;
-
+//        if (category == null && req.getPathInfo() == null || req.getPathInfo().equals("/")) {
+//            req.setAttribute("categories", categoryRepository.findAll());
+//            getServletContext().getRequestDispatcher("/WEB-INF/category.jsp").forward(req, resp);
+//        }
         List<Product> products = productRepository.findAll().stream().filter(product -> product.getCategory()==category).collect(Collectors.toList());
         req.setAttribute("products", products);
         getServletContext().getRequestDispatcher("/WEB-INF/product.jsp").forward(req, resp);

@@ -30,9 +30,23 @@
             <li class="nav-item active">
                 <a class="nav-link" href=<%=getServletContext().getContextPath()%>/user>User</a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href=<%= getServletContext().getContextPath()%>/category>Catalog</a>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href=<%= getServletContext().getContextPath()%>/category id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Catalog
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <c:forEach var="category" items="${requestScope.categories}">
+                        <c:url value="/category/get" var="categoryById">
+                            <c:param name="id" value="${category.id}"/>
+                        </c:url>
+                        <a class="dropdown-item" href="${categoryById}"><c:out value="${category.title}"/></a>
+                    </c:forEach>
+                </div>
+
             </li>
+
             <li class="nav-item active">
                 <a class="nav-link" href=<%= getServletContext().getContextPath()%>/product>Product</a>
             </li>
@@ -60,7 +74,7 @@
                 <tr>
                     <th scope="row">
 
-                        <c:url value="/category/get" var="categoryById">
+                        <c:url value="/product/category/get" var="categoryById">
                             <c:param name="id" value="${category.id}"/>
                         </c:url>
                         <a href="${categoryById}"><c:out value="${category.title}"/></a>

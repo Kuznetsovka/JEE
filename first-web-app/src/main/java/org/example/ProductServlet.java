@@ -37,6 +37,7 @@ public class ProductServlet extends HttpServlet {
         long id;
         if (req.getPathInfo() == null || req.getPathInfo().equals("/")) {
             req.setAttribute("products", productRepository.findAll());
+            req.setAttribute("categories", categoryRepository.findAll());
             getServletContext().getRequestDispatcher("/WEB-INF/product.jsp").forward(req, resp);
         }
         switch (req.getPathInfo()) {
