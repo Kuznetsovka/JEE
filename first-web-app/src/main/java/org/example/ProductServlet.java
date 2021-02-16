@@ -35,6 +35,7 @@ public class ProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info(req.getPathInfo());
         long id;
+        req.setAttribute("pageHeader", "Продукты");
         if (req.getPathInfo() == null || req.getPathInfo().equals("/")) {
             req.setAttribute("products", productRepository.findAll());
             req.setAttribute("categories", categoryRepository.findAll());

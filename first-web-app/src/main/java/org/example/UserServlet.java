@@ -35,6 +35,7 @@ public class UserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().println(userRepository);
         logger.info(req.getPathInfo());
+        req.setAttribute("pageHeader", "Пользователи");
         if (req.getPathInfo() == null || req.getPathInfo().equals("/")) {
             req.setAttribute("users", userRepository.findAll());
             req.setAttribute("categories", categoryRepository.findAll());
