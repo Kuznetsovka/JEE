@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.persist.Category;
-import org.example.persist.Repository;
-import org.example.persist.Role;
-import org.example.persist.User;
+import org.example.persist.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -68,8 +65,7 @@ public class UserServlet extends HttpServlet {
     }
 
     private void getCreateUser(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        User user = new User();
-        userRepository.saveOrUpdate(user);
+        User user = new User(userRepository.lastId()+1);
         req.setAttribute("user", user);
         getServletContext().getRequestDispatcher("/WEB-INF/user_form.jsp").forward(req, resp);
     }

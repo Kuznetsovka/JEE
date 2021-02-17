@@ -1,6 +1,7 @@
 package org.example.persist;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -25,6 +26,10 @@ public class Repository<T extends Entities> {
             entity.setId(id);
         }
         entities.put(entity.getId(), entity);
+    }
+
+    public Long lastId(){
+        return entities.keySet().stream().max(Long::compare).get();
     }
 
     public void deleteById(Long id) {

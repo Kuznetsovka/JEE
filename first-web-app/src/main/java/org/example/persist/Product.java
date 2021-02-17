@@ -24,4 +24,8 @@ public class Product implements Entities {
         this.description = description;
         this.price = price;
     }
+    public Product(Long id) {
+        this.id = id;
+    }
+
 }

@@ -26,4 +26,7 @@ public class User implements Entities {
         this.email = email;
         this.role = role;
     }
+    public User(Long id) {
+        this.id = id;
+    }
 }

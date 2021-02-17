@@ -68,8 +68,7 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void getCreateProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Product product = new Product();
-        productRepository.saveOrUpdate(product);
+        Product product = new Product(productRepository.lastId()+1);
         redirectProductForm(req, resp, product);
     }
 
