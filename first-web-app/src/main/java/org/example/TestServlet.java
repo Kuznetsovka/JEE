@@ -5,11 +5,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = {"/true-shop/test"})
+@WebServlet(urlPatterns = {"/test"})
 public class TestServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        throw new ArithmeticException();
+        throw new ArithmeticException("");
     }
 }
