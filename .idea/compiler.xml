@@ -8,7 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="first-web-app" />
+        <module name="first-jsf-app" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jsf" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

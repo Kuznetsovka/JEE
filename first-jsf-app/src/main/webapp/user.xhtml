@@ -1,0 +1,70 @@
+<html lang="en"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<ui:include src="/head.xhtml">
+    <ui:param name="header" value="User list" />
+</ui:include>
+<h:body>
+    <ui:include src="/menu.xhtml"/>
+    <div class="container">
+        <div class="row py-2">
+            <h:form id="userForm">
+                <div class="col-12">
+                    <h:commandButton value="Add user" styleClass="btn btn-primary"
+                                     action="#{userController.createUser()}"/>
+                </div>
+
+                <div class="col-12">
+                    <h:dataTable value="#{userController.allUsers}" var="user"
+                                 styleClass="table table-bordered my-2">
+                        <h:column>
+                            <f:facet name="header">Id</f:facet>
+                            #{user.id}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Name</f:facet>
+                            #{user.name}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Password</f:facet>
+                            #{user.password}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Email</f:facet>
+                            #{user.email}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Actions</f:facet>
+
+                            <h:commandButton value="Edit" styleClass="btn btn-success"
+                                             action="#{userController.editUser(user)}"
+                                             icon="fas fa-edit">
+                                <f:ajax event="click" render="userForm"/>
+                            </h:commandButton>
+                            <h:commandButton value="Delete" styleClass="btn btn-danger"
+                                             action="#{userController.deleteUser(user)}"
+                                             icon="far fa-trash-alt">
+                                <f:ajax event="click" render="userForm"/>
+                            </h:commandButton>
+                        </h:column>
+                    </h:dataTable>
+                </div>
+            </h:form>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</h:body>
+
+</html>

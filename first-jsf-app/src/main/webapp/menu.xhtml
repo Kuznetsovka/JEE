@@ -1,0 +1,48 @@
+<html lang="en"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <nav id="nav-menu" class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">TrueShop</a>
+
+        <h:commandButton class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        </h:commandButton>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#{application.contextPath}/main.xhtml">Main</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#{application.contextPath}/user.xhtml">User</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#{application.contextPath}/category.xhtml" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Catalog
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <h:dataTable value="#{categoryController.allCategories}" var="category"
+                                     styleClass="dropdown-item">
+                        <h:column>
+                            <a class="dropdown-item" href="/product/category/#{category.id}">#{category.title}</a>
+                        </h:column>
+                        </h:dataTable>
+                    </div>
+
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="#{application.contextPath}/product.xhtml">Product</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#{application.contextPath}/order.xhtml">Order</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#{application.contextPath}/card.xhtml">Card</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</html>
