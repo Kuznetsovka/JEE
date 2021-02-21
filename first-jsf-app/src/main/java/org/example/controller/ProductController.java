@@ -1,15 +1,18 @@
 package org.example.controller;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import org.example.persist.Cart;
 import org.example.persist.Product;
+import org.example.persist.User;
 import org.example.repository.ProductRepository;
+
+import org.example.repository.UserRepository;
 
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
+import java.lang.reflect.Parameter;
 import java.util.List;
 
 @Named
@@ -21,6 +24,8 @@ public class ProductController implements Serializable {
     private ProductRepository productRepository;
 
     private Product product;
+    @Inject
+    private UserRepository userRepository;
 
     public String createProduct() {
         this.product = new Product();

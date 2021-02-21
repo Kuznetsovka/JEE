@@ -4,7 +4,6 @@ import lombok.*;
 
 import javax.enterprise.context.Dependent;
 import java.math.BigDecimal;
-import java.util.List;
 
 @Data
 @NoArgsConstructor

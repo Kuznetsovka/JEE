@@ -1,21 +1,22 @@
 package org.example.repository;
 
+import org.example.persist.Cart;
 import org.example.persist.Category;
 import org.example.persist.Product;
+import org.example.persist.User;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Named
 @ApplicationScoped
 public class ProductRepository extends Repository<Product> {
+
     public ProductRepository() {
         super();
     }

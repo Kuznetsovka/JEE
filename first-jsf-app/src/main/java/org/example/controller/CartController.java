@@ -1,25 +1,45 @@
 package org.example.controller;
 
 
+import lombok.Data;
+import org.example.persist.Cart;
 import org.example.persist.Product;
+import org.example.persist.User;
+import org.example.repository.CartRepository;
+import org.example.repository.ProductRepository;
+import org.example.repository.UserRepository;
 
 import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Map;
+import java.security.Principal;
 
 @Named
+@Data
 @SessionScoped
 public class CartController implements Serializable {
-
-    private Map<Long, Product> productMap = new HashMap<>();
-
-    public String addToCart(Product product) {
-        return "";
-    }
+    @Inject
+    private UserRepository userRepository;
+    @Inject
+    private ProductRepository productRepository;
+    private Cart cart;
+    @Inject
+    private CartRepository cartRepository;
 
     public String removeFromCart(Product product) {
         return "";
+    }
+
+    public String deleteProductFromCart(Product product) {
+        cartRepository.deleteProductFromCart(product);
+        return "/cart.xhtml?faces-redirect-true";
+    }
+
+    public String addToCart(Product product ) {
+        // Определение юзера
+        User user = userRepository.findById(1L);
+        Cart cart = userRepository.addToUserCart(product, user);
+        return "/cart.xhtml?faces-redirect-true";
     }
 }

@@ -6,16 +6,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.Objects;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Bucket implements Entities {
+public class Cart implements Entities {
 
     private Long id;
-
-    private User user;
-
     private List<Product> products;
+
 }

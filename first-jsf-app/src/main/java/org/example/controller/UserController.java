@@ -1,7 +1,8 @@
 package org.example.controller;
 
 import lombok.Data;
-import lombok.Getter;
+import org.example.persist.Cart;
+import org.example.persist.Product;
 import org.example.persist.User;
 import org.example.repository.UserRepository;
 
@@ -9,6 +10,7 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
+import java.util.Collections;
 import java.util.List;
 
 @Named
@@ -18,6 +20,8 @@ public class UserController implements Serializable {
 
     @Inject
     private UserRepository userRepository;
+    @Inject
+    private CartController cartController;
 
     private User user;
 

@@ -4,8 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Преварительный вариант, пока без корзины.">
+    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Добавление и удаление из корзины работает. Пока с заглушками. Не понятно как передавать в xhtml рабочую корзину или юзера.&#10;Пытался добавить primefaces. Вроде добавил зависимости и все что нужно. Но стили так и не подтягиваются.">
+      <change afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/ButtonView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/cart.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/new.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Bucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/head.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/head.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product_form.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product_form.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user_form.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user_form.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +56,9 @@
     <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="Kuznetsovka" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="JEE" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1nhssQUSUDt8qS4Ykr4GUBr47cf" />
   <component name="ProjectViewState">
@@ -68,9 +93,9 @@
       <recent name="C:\Java\Java-EE\first-web-app\src\main\webapp\WEB-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.repository" />
       <recent name="org.example.persist" />
       <recent name="org.example.controller" />
-      <recent name="org.example.repository" />
       <recent name="org.example" />
       <recent name="org.example.filter" />
     </key>
@@ -148,6 +173,10 @@
       <option name="HOST" value="localhost" />
       <option name="PORT" value="8787" />
       <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="8787" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
       <method v="2" />
     </configuration>
     <configuration name="debug" type="Remote">
@@ -204,7 +233,7 @@
       <workItem from="1613673927630" duration="598000" />
       <workItem from="1613750278363" duration="413000" />
       <workItem from="1613750710202" duration="668000" />
-      <workItem from="1613751645124" duration="16718000" />
+      <workItem from="1613751645124" duration="38012000" />
     </task>
     <task id="LOCAL-00001" summary="Рабочая версия. Заработало только на 8 версии.">
       <created>1611865489517</created>
@@ -255,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613769636041</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix">
+      <created>1613770067252</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613770067252</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,17 +316,27 @@
     <MESSAGE value="Решил проблему с импортом main.jsp" />
     <MESSAGE value="Решил проблему с своевременных сохранением новой сущности" />
     <MESSAGE value="Преварительный вариант, пока без корзины." />
-    <option name="LAST_COMMIT_MESSAGE" value="Преварительный вариант, пока без корзины." />
+    <MESSAGE value="fix" />
+    <MESSAGE value="Добавление и удаление из корзины работает. Пока с заглушками. Не понятно как передавать в xhtml рабочую корзину или юзера.&#10;Пытался добавить primefaces. Вроде добавил зависимости и все что нужно. Но стили так и не подтягиваются." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление и удаление из корзины работает. Пока с заглушками. Не понятно как передавать в xhtml рабочую корзину или юзера.&#10;Пытался добавить primefaces. Вроде добавил зависимости и все что нужно. Но стили так и не подтягиваются." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/ProductRepository.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/UserRepository.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Remote">
+        <watch expression="userRepository.findById(1L)" language="JAVA" />
+        <watch expression="user" language="JAVA" />
+        <watch expression="Collections.singletonList(product)" language="JAVA" />
+        <watch expression="Collections.singletonList(product.getId())" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

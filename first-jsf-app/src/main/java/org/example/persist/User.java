@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Objects;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,7 +19,7 @@ public class User implements Entities {
     private String email;
     private boolean archive;
     private Role role;
-    private Bucket bucket;
+    private Cart cart;
 
     public User(Long id, String name, String password, String email, Role role) {
         this.id = id;
