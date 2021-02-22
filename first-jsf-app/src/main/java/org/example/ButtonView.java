@@ -11,6 +11,7 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
@@ -18,7 +19,6 @@ import javax.inject.Named;
 public class ButtonView {
 
     private MenuModel model;
-    private ProductController productController;
 
     @PostConstruct
     public void init() {
@@ -72,13 +72,11 @@ public class ButtonView {
         return null;
     }
 
-    public void update(Product product) {
-        productController.editProduct(product);
+    public void update() {
         addMessage("Data updated");
     }
 
-    public void delete(Product product) {
-        productController.deleteProduct(product);
+    public void delete() {
         addMessage("Data deleted");
     }
 

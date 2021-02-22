@@ -1,6 +1,6 @@
 <html lang="en"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 
@@ -34,10 +34,20 @@
                     <input type="hidden" id="id" name="id"/>
                     <div class="form-group">
                         <label>Name</label>
-                        <h:inputText styleClass="form-control" id="name"
-                                     value="#{userController.user.name}"
-                                     placeholder="Enter name"/>
+                        <div class="ui-inputgroup">
+                            <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                            <p:inputText styleClass="form-control"
+                                            value="#{userController.user.name}"
+                                         id="name"
+                                         placeholder="Enter name"/>
+                        </div>
                     </div>
+<!--                    <div class="form-group">-->
+<!--                        <label>Name</label>-->
+<!--                        <h:inputText styleClass="form-control" id="name"-->
+<!--                                     value="#{userController.user.name}"-->
+<!--                                     placeholder="Enter name"/>-->
+<!--                    </div>-->
                     <div class="form-group">
                         <label>Password</label>
                         <h:inputText styleClass="form-control" id="password"

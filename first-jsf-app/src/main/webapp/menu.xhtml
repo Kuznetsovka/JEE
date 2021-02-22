@@ -22,9 +22,8 @@
                         Catalog
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <h:dataTable value="#{categoryController.allCategories}" var="category"
-                                     styleClass="dropdown-item">
-                        <h:column>
+                        <h:dataTable value="#{categoryController.allCategories}" var="category">
+                        <h:column styleClass="dropdown-item">
                             <a class="dropdown-item" href="/product/category/#{category.id}">#{category.title}</a>
                         </h:column>
                         </h:dataTable>
@@ -39,7 +38,7 @@
                     <a class="nav-link" href="#{application.contextPath}/order.xhtml">Order</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#{application.contextPath}/card.xhtml">Card</a>
+                    <a class="nav-link" href="#{application.contextPath}/cart.xhtml">Cart</a>
                 </li>
             </ul>
         </div>

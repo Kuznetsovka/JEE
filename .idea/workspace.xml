@@ -5,28 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Добавление и удаление из корзины работает. Пока с заглушками. Не понятно как передавать в xhtml рабочую корзину или юзера.&#10;Пытался добавить primefaces. Вроде добавил зависимости и все что нужно. Но стили так и не подтягиваются.">
-      <change afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/ButtonView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CartRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/cart.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/new.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-jsf-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Bucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/ButtonView.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/ButtonView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/head.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/head.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product_form.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product_form.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/menu.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/menu.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/new.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/new.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user_form.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user_form.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +26,7 @@
         <option value="Jsp File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="XHTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -66,6 +53,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -233,7 +221,7 @@
       <workItem from="1613673927630" duration="598000" />
       <workItem from="1613750278363" duration="413000" />
       <workItem from="1613750710202" duration="668000" />
-      <workItem from="1613751645124" duration="38012000" />
+      <workItem from="1613751645124" duration="51248000" />
     </task>
     <task id="LOCAL-00001" summary="Рабочая версия. Заработало только на 8 версии.">
       <created>1611865489517</created>
@@ -291,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613770067252</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Добавление и удаление из корзины работает. Пока с заглушками. Не понятно как передавать в xhtml рабочую корзину или юзера.&#10;Пытался добавить primefaces. Вроде добавил зависимости и все что нужно. Но стили так и не подтягиваются.">
+      <created>1613920795383</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613920795383</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
