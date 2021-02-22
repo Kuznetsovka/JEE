@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Добавление и удаление из корзины работает. Пока с заглушками. Не понятно как передавать в xhtml рабочую корзину или юзера.&#10;Пытался добавить primefaces. Вроде добавил зависимости и все что нужно. Но стили так и не подтягиваются.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Прикрутил Primefaces, использовал пока только в 1 месте. Забыл запушить style.xhtml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/ButtonView.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/ButtonView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/head.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/head.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/menu.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/menu.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/new.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/new.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user_form.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user_form.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +217,7 @@
       <workItem from="1613673927630" duration="598000" />
       <workItem from="1613750278363" duration="413000" />
       <workItem from="1613750710202" duration="668000" />
-      <workItem from="1613751645124" duration="51248000" />
+      <workItem from="1613751645124" duration="53565000" />
     </task>
     <task id="LOCAL-00001" summary="Рабочая версия. Заработало только на 8 версии.">
       <created>1611865489517</created>
@@ -286,7 +282,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613920795383</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Прикрутил Primefaces, использовал пока только в 1 месте.">
+      <created>1614001215673</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1614001215673</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Прикрутил Primefaces, использовал пока только в 1 месте. Забыл запушить style.xhtml">
+      <created>1614001285709</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1614001285709</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +323,9 @@
     <MESSAGE value="Преварительный вариант, пока без корзины." />
     <MESSAGE value="fix" />
     <MESSAGE value="Добавление и удаление из корзины работает. Пока с заглушками. Не понятно как передавать в xhtml рабочую корзину или юзера.&#10;Пытался добавить primefaces. Вроде добавил зависимости и все что нужно. Но стили так и не подтягиваются." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление и удаление из корзины работает. Пока с заглушками. Не понятно как передавать в xhtml рабочую корзину или юзера.&#10;Пытался добавить primefaces. Вроде добавил зависимости и все что нужно. Но стили так и не подтягиваются." />
+    <MESSAGE value="Прикрутил Primefaces, использовал пока только в 1 месте." />
+    <MESSAGE value="Прикрутил Primefaces, использовал пока только в 1 месте. Забыл запушить style.xhtml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Прикрутил Primefaces, использовал пока только в 1 месте. Забыл запушить style.xhtml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

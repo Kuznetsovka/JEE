@@ -19,6 +19,8 @@ import javax.inject.Named;
 public class ButtonView {
 
     private MenuModel model;
+    @Inject
+    private ProductController productController;
 
     @PostConstruct
     public void init() {
@@ -79,6 +81,7 @@ public class ButtonView {
     public void delete() {
         addMessage("Data deleted");
     }
+
 
     public void buttonAction() {
         addMessage("Welcome to PrimeFaces!!");
