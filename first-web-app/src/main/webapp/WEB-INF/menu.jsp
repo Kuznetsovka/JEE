@@ -1,5 +1,3 @@
-<%@ page import="org.example.persist.Category" %>
-<%@ page import="java.util.List" %>
 <%@ page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
@@ -15,14 +13,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href=<%=getServletContext().getContextPath()%>/main>Main</a>
+                <a class="nav-link" href=<%=application.getContextPath()%>/main>Main</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href=<%=getServletContext().getContextPath()%>/user>User</a>
+                <a class="nav-link" href=<%=application.getContextPath()%>/user>User</a>
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href=<%= getServletContext().getContextPath()%>/category id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href=<%=application.getContextPath()%>/category id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Catalog
                 </a>
 
@@ -38,13 +36,13 @@
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href=<%= getServletContext().getContextPath()%>/product>Product</a>
+                <a class="nav-link" href=<%= application.getContextPath()%>/product>Product</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href=<%= getServletContext().getContextPath()%>/order>Order</a>
+                <a class="nav-link" href=<%= application.getContextPath()%>/order>Order</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href=<%=getServletContext().getContextPath()%>/card>Card</a>
+                <a class="nav-link" href=<%=application.getContextPath()%>/card>Card</a>
             </li>
         </ul>
     </div>

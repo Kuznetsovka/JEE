@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Решил проблему с импортом main.jsp">
+    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Прикрутил Primefaces, использовал пока только в 1 месте. Забыл запушить style.xhtml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/java/org/example/persist/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product_form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/user_form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/ButtonView.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/ButtonView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/new.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/new.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +22,7 @@
         <option value="Jsp File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="XHTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -34,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson2" />
+        <entry key="$PROJECT_DIR$" value="lesson3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,8 +40,8 @@
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="Kuznetsovka" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="JEE" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/first-web-app/src/main/webapp/WEB-INF/product.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1nhssQUSUDt8qS4Ykr4GUBr47cf" />
   <component name="ProjectViewState">
@@ -53,11 +49,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../trueshop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/first-jsf-app/src/main/webapp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -66,34 +63,65 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Java\Java-EE\first-web-app\src\main\java\org\example" />
-      <recent name="C:\Users\Кирил\IdeaProjects\Java-EE2\.idea" />
-      <recent name="C:\Users\Кирил\IdeaProjects\Java-EE2\first-web-app\src\main" />
+      <recent name="C:\Java\Java-EE\first-jsf-app\src\main\webapp" />
+      <recent name="C:\Java\Java-EE\first-jsf-app\src\main\webapp\WEB-INF" />
+      <recent name="C:\Java\Java-EE\jsf\src\main\java\org\example" />
+      <recent name="C:\Java\Java-EE\jsf\src\main\java" />
+      <recent name="C:\Java\Java-EE\first-jsf-app\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Java\Java-EE\first-jsf-app\src\main\webapp\WEB-INF" />
+      <recent name="C:\Java\Java-EE\first-jsf-app\src\main\webapp" />
+      <recent name="C:\Java\Java-EE\first-jsf-app\src\main" />
       <recent name="C:\Java\Java-EE\first-web-app\src\main\webapp" />
       <recent name="C:\Java\Java-EE\first-web-app\src\main\webapp\WEB-INF" />
-      <recent name="C:\Java\Java-EE\first-web-app\src\main\java" />
-      <recent name="C:\Java\Java-EE\first-web-app\src\main\java\org\example" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.repository" />
+      <recent name="org.example.persist" />
+      <recent name="org.example.controller" />
       <recent name="org.example" />
       <recent name="org.example.filter" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Maven.first-jsf-app">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="first-jsf-app" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="wildfly:deploy" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/first-jsf-app" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
     <configuration name="first-web-app" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -122,6 +150,38 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="Wild_fly_debug" type="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8787" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="8787" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="debug" type="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Maven.first-web-app" />
+      <item itemvalue="Maven.first-jsf-app" />
+      <item itemvalue="Remote JVM Debug.Wild_fly_debug" />
+      <item itemvalue="Remote JVM Debug.debug" />
+    </list>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -153,6 +213,11 @@
       <workItem from="1611946119923" duration="1827000" />
       <workItem from="1612285813113" duration="125000" />
       <workItem from="1612374078177" duration="8565000" />
+      <workItem from="1613585875711" duration="1059000" />
+      <workItem from="1613673927630" duration="598000" />
+      <workItem from="1613750278363" duration="413000" />
+      <workItem from="1613750710202" duration="668000" />
+      <workItem from="1613751645124" duration="53565000" />
     </task>
     <task id="LOCAL-00001" summary="Рабочая версия. Заработало только на 8 версии.">
       <created>1611865489517</created>
@@ -189,7 +254,49 @@
       <option name="project" value="LOCAL" />
       <updated>1613555451481</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Решил проблему с своевременных сохранением новой сущности">
+      <created>1613582483716</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613582483716</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Преварительный вариант, пока без корзины.">
+      <created>1613769636041</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613769636041</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix">
+      <created>1613770067252</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613770067252</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Добавление и удаление из корзины работает. Пока с заглушками. Не понятно как передавать в xhtml рабочую корзину или юзера.&#10;Пытался добавить primefaces. Вроде добавил зависимости и все что нужно. Но стили так и не подтягиваются.">
+      <created>1613920795383</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613920795383</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Прикрутил Primefaces, использовал пока только в 1 месте.">
+      <created>1614001215673</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1614001215673</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Прикрутил Primefaces, использовал пока только в 1 месте. Забыл запушить style.xhtml">
+      <created>1614001285709</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1614001285709</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +319,31 @@
     <MESSAGE value="Работа на 11, после смены JAVA_HOME" />
     <MESSAGE value="Добавил вставку заголовков" />
     <MESSAGE value="Решил проблему с импортом main.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Решил проблему с импортом main.jsp" />
+    <MESSAGE value="Решил проблему с своевременных сохранением новой сущности" />
+    <MESSAGE value="Преварительный вариант, пока без корзины." />
+    <MESSAGE value="fix" />
+    <MESSAGE value="Добавление и удаление из корзины работает. Пока с заглушками. Не понятно как передавать в xhtml рабочую корзину или юзера.&#10;Пытался добавить primefaces. Вроде добавил зависимости и все что нужно. Но стили так и не подтягиваются." />
+    <MESSAGE value="Прикрутил Primefaces, использовал пока только в 1 месте." />
+    <MESSAGE value="Прикрутил Primefaces, использовал пока только в 1 месте. Забыл запушить style.xhtml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Прикрутил Primefaces, использовал пока только в 1 месте. Забыл запушить style.xhtml" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/UserRepository.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Remote">
+        <watch expression="userRepository.findById(1L)" language="JAVA" />
+        <watch expression="user" language="JAVA" />
+        <watch expression="Collections.singletonList(product)" language="JAVA" />
+        <watch expression="Collections.singletonList(product.getId())" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
