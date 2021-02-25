@@ -11,11 +11,8 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#{application.contextPath}/main.xhtml">Main</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#{application.contextPath}/user.xhtml">User</a>
+                <li class="nav-item #{pageName == 'User'}? 'active' :''">
+                    <h:link styleClass="nav-link" value="User" outcome="user"/>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#{application.contextPath}/category.xhtml" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -24,21 +21,20 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <h:dataTable value="#{categoryController.allCategories}" var="category">
                         <h:column styleClass="dropdown-item">
-                            <a class="dropdown-item" href="/product/category/#{category.id}">#{category.title}</a>
+                            <h:link styleClass="dropdown-item" value="#{category.title}" outcome="/product/category/#{category.id}"/>
                         </h:column>
                         </h:dataTable>
                     </div>
 
                 </li>
-
-                <li class="nav-item active">
-                    <a class="nav-link" href="#{application.contextPath}/product.xhtml">Product</a>
+                <li class="nav-item #{pageName == 'Product'}? 'active' :''">
+                    <h:link styleClass="nav-link" value="Product" outcome="product"/>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#{application.contextPath}/order.xhtml">Order</a>
+                <li class="nav-item #{pageName == 'Order'}? 'active' :''">
+                    <h:link styleClass="nav-link" value="Order" outcome="order"/>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#{application.contextPath}/cart.xhtml">Cart</a>
+                <li class="nav-item #{pageName == 'Cart'}? 'active' :''">
+                    <h:link styleClass="nav-link" value="Cart" outcome="cart"/>
                 </li>
             </ul>
         </div>

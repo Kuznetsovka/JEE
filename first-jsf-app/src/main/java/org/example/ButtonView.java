@@ -1,17 +1,13 @@
 package org.example;
 
-import org.example.controller.ProductController;
-import org.example.persist.Product;
 import org.primefaces.model.menu.DefaultMenuItem;
 import org.primefaces.model.menu.DefaultMenuModel;
 import org.primefaces.model.menu.DefaultSubMenu;
 import org.primefaces.model.menu.MenuModel;
-
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
@@ -19,8 +15,6 @@ import javax.inject.Named;
 public class ButtonView {
 
     private MenuModel model;
-    @Inject
-    private ProductController productController;
 
     @PostConstruct
     public void init() {

@@ -6,7 +6,9 @@
     <ui:param name="header" value="User list" />
 </ui:include>
 <h:body>
-    <ui:include src="/menu.xhtml"/>
+    <ui:include src="/menu.xhtml">
+        <ui:param name="pageName" value="User"/>
+    </ui:include>
     <div class="container">
         <div class="row py-2">
             <h:form id="userForm">

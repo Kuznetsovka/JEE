@@ -2,15 +2,12 @@ package org.example.repository;
 
 import org.example.persist.Cart;
 import org.example.persist.Product;
-import org.example.persist.Role;
 import org.example.persist.User;
 
-import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,7 +18,7 @@ public class CartRepository extends Repository<Cart> {
     private ProductRepository productRepository;
 
     public CartRepository() {
-        super();
+        super(Cart.class);
     }
 
     public Cart createCart(User user, List<Long> productIds) {

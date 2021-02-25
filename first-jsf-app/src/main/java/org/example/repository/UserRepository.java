@@ -9,9 +9,7 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import java.math.BigDecimal;
 import java.util.Collections;
-import java.util.List;
 
 @Named
 @ApplicationScoped
@@ -20,7 +18,7 @@ public class UserRepository extends Repository<User> {
     private CartRepository cartRepository;
 
     public UserRepository() {
-        super();
+        super(User.class);
     }
 
     @PostConstruct

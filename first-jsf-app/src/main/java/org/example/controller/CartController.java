@@ -13,7 +13,6 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
-import java.security.Principal;
 
 @Named
 @Data
@@ -33,13 +32,13 @@ public class CartController implements Serializable {
 
     public String deleteProductFromCart(Product product) {
         cartRepository.deleteProductFromCart(product);
-        return "/cart.xhtml?faces-redirect-true";
+        return "/cart.xhtml?faces-redirect=true";
     }
 
     public String addToCart(Product product ) {
         // Определение юзера
         User user = userRepository.findById(1L);
         Cart cart = userRepository.addToUserCart(product, user);
-        return "/cart.xhtml?faces-redirect-true";
+        return "/cart.xhtml?faces-redirect=true";
     }
 }
