@@ -14,6 +14,9 @@ import java.util.List;
 @EqualsAndHashCode
 @Entity
 @Table(name="products")
+@NamedQueries({
+        @NamedQuery(name = "productsByCategory", query = "select p from Product p join p.category pc where pc.id=:id")
+})
 public class Product implements Entities {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,6 +36,7 @@ public class Product implements Entities {
         this.name = name;
         this.description = description;
         this.price = price;
+
     }
     public Product(Long id) {
         this.id = id;

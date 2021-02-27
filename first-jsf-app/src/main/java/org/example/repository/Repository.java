@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
 
 import java.util.List;
@@ -16,15 +17,18 @@ public abstract class Repository<T extends Entities> {
     private final Class<T> thisClass;
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     @PersistenceContext(unitName = "ds")
-    private EntityManager em;
+    protected EntityManager em;
+    private final String nameClass;
 
     protected Repository(Class<T> thisClass) {
         this.thisClass = thisClass;
+        this.nameClass = thisClass.getSimpleName();
     }
 
     public List<T> findAll() {
-        return em.createQuery("select * from " + thisClass.getSimpleName()).getResultList();
+        return em.createQuery("from " + nameClass,thisClass).getResultList();
     }
+
 
     public T findById(Long id) {
         return em.find(thisClass, id);
@@ -32,7 +36,7 @@ public abstract class Repository<T extends Entities> {
 
     public Long countAll() {
         logger.info("Count");
-        return em.createQuery("select count(*) from " + thisClass.getSimpleName(),Long.class).getSingleResult();
+        return em.createQuery("select count(*) from " + nameClass,Long.class).getSingleResult();
     }
 
     @Transactional
@@ -53,10 +57,9 @@ public abstract class Repository<T extends Entities> {
         }
         return entity;
     }
-
     @Transactional
     public void deleteById(Long id) {
-        em.createQuery("delete from "+ thisClass.getSimpleName() +" p where p.id = " + id);
+        em.createQuery(String.format("delete from %s where id = %d", nameClass, id)).executeUpdate();
     }
 
 }
