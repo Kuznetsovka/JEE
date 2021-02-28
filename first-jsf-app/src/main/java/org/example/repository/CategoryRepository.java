@@ -20,7 +20,7 @@ public class CategoryRepository extends Repository<Category> {
     private static final Logger logger = LoggerFactory.getLogger(ProductRepository.class);
     @Resource
     private UserTransaction ut;
-    @PostConstruct
+//    @PostConstruct
     public void init() throws Exception {
         if (countAll() == 0) {
             try {

@@ -5,7 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.example.persist.User;
 import org.example.repository.UserRepository;
+
 import javax.enterprise.context.SessionScoped;
+import javax.faces.event.ComponentSystemEvent;
 import javax.faces.event.ValueChangeEvent;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -27,8 +29,8 @@ public class UserController implements Serializable {
     private User selectedUser;
     private List<User> users;
 
-    public void preloadData() {
-            users = userRepository.findAll();
+    public void preloadData(ComponentSystemEvent componentSystemEvent) {
+        users = userRepository.findAll();
     }
 
     public String createUser() {

@@ -50,7 +50,7 @@ public class UserRepository extends Repository<User> {
         }
         Cart cart = user.getCart();
         if(cart == null){
-            Cart newCart = cartRepository.createCart(user, Collections.singletonList(product.getId()));
+            Cart newCart = cartRepository.createCart(Collections.singletonList(product.getId()));
             user.setCart(newCart);
             this.saveOrUpdate(user);
             cart = newCart;

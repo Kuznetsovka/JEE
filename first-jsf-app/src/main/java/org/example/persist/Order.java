@@ -34,7 +34,7 @@ public class Order implements Entities {
     private BigDecimal sum;
     @Column
     private String address;
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.PERSIST)
     private List<OrderDetails> details;
     @Column
     @Enumerated(EnumType.STRING)

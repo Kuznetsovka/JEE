@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 import javax.transaction.UserTransaction;
 import java.math.BigDecimal;
@@ -24,6 +25,8 @@ public class ProductRepository extends Repository<Product> {
     private static final Logger logger = LoggerFactory.getLogger(ProductRepository.class);
     @Resource
     private UserTransaction ut;
+    @Inject
+    CategoryRepository categoryRepository;
     @PostConstruct
     public void init() throws Exception {
         if (countAll() == 0) {

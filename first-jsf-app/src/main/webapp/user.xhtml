@@ -40,8 +40,8 @@
                         <h:column>
                             <f:facet name="header">Select</f:facet>
                             <h:selectOneRadio value="#{userController.selectUser(user)}"
-                                              onclick="dataTableSelectOneRadio(this);">
-                                <valueChangeListener>#{userController.listenerChangeUser}</valueChangeListener>
+                                              onclick="dataTableSelectOneRadio(this);"
+                                              valueChangeListener="#{userController.listenerChangeUser}">
                                 <f:selectItem itemValue="null"/>
                             </h:selectOneRadio>
                         </h:column>
