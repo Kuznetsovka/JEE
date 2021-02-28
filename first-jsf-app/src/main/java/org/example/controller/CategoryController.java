@@ -3,12 +3,9 @@ package org.example.controller;
 
 import lombok.Data;
 import org.example.persist.Category;
-import org.example.persist.Product;
 import org.example.repository.CategoryRepository;
 
-import javax.ejb.Stateful;
 import javax.enterprise.context.SessionScoped;
-import javax.faces.event.ComponentSystemEvent;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
@@ -23,10 +20,9 @@ public class CategoryController implements Serializable {
     private CategoryRepository categoryRepository;
     private List<Category> categories;
 
-    public void preloadData(ComponentSystemEvent componentSystemEvent) {
+    public void preloadData() {
         categories = categoryRepository.findAll();
     }
-
     public List<Category> getAllCategories() {
         return categories;
     }

@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 import org.example.persist.User;
 import org.example.repository.UserRepository;
-
 import javax.enterprise.context.SessionScoped;
 import javax.faces.event.ValueChangeEvent;
 import javax.inject.Inject;
@@ -26,6 +25,11 @@ public class UserController implements Serializable {
     private CartController cartController;
     private User user;
     private User selectedUser;
+    private List<User> users;
+
+    public void preloadData() {
+            users = userRepository.findAll();
+    }
 
     public String createUser() {
         this.user = new User();
@@ -33,7 +37,7 @@ public class UserController implements Serializable {
     }
 
     public List<User> getAllUsers() {
-        return userRepository.findAll();
+        return users;
     }
 
     public String editUser(User user) {

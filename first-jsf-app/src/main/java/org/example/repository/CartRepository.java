@@ -42,9 +42,7 @@ public class CartRepository extends Repository<Cart> {
         this.saveOrUpdate(cart);
     }
     @Transactional
-    public void deleteProductFromCart(Product product) {
-        //Газлушка определения cart
-        Cart cart = this.findById(1L);
+    public void deleteProductFromCart(Cart cart, Product product) {
         if(cart == null || cart.getProducts().isEmpty()){
             return;
         }

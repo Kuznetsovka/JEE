@@ -7,7 +7,6 @@ import org.example.repository.ProductRepository;
 import org.example.repository.UserRepository;
 
 import javax.enterprise.context.SessionScoped;
-import javax.faces.event.ComponentSystemEvent;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
@@ -28,18 +27,13 @@ public class ProductController implements Serializable {
     private UserRepository userRepository;
     private boolean filter;
 
-    public void preloadData(ComponentSystemEvent componentSystemEvent) {
+    public void preloadData() {
         if (!filter)
             products = productRepository.findAll();
         filter = false;
     }
 
     public String createProduct() {
-        this.product = new Product();
-        return "/product_form.xhtml?faces-redirect=true";
-    }
-
-    public String getProductByIdCategory(Long id) {
         this.product = new Product();
         return "/product_form.xhtml?faces-redirect=true";
     }

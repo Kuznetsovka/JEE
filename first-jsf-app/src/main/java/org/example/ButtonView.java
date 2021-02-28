@@ -76,11 +76,6 @@ public class ButtonView {
         addMessage("Data deleted");
     }
 
-
-    public void buttonAction() {
-        addMessage("Welcome to PrimeFaces!!");
-    }
-
     public void addMessage(String summary) {
         FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, summary, null);
         FacesContext.getCurrentInstance().addMessage(null, message);
