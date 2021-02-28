@@ -1,10 +1,26 @@
 <html lang="en"
-      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 <ui:include src="/head.xhtml">
-    <ui:param name="header" value="User list" />
+    <ui:param name="header" value="User list"/>
 </ui:include>
+<script>
+    function dataTableSelectOneRadio(radio) {
+        var radioId = radio.name.substring(radio.name.lastIndexOf(':'));
+
+        for (var i = 0; radio.form.elements.length > i; i++) {
+            var element = radio.form.elements[i];
+
+            if (element.name.substring(element.name.lastIndexOf(':')) == radioId) {
+                element.checked = false;
+            }
+        }
+
+        radio.checked = true;
+    }
+</script>
 <h:body>
     <ui:include src="/menu.xhtml">
         <ui:param name="pageName" value="User"/>
@@ -16,10 +32,17 @@
                     <h:commandButton value="Add user" styleClass="btn btn-primary"
                                      action="#{userController.createUser()}"/>
                 </div>
-
                 <div class="col-12">
                     <h:dataTable value="#{userController.allUsers}" var="user"
                                  styleClass="table table-bordered my-2">
+                        <h:column>
+                            <f:facet name="header">Select</f:facet>
+                            <h:selectOneRadio value="#{userController.selectUser(user)}"
+                                              valueChangeListener="#{userController.listenerChangeUser}"
+                                              onclick="dataTableSelectOneRadio(this);">
+                                <f:selectItem itemValue="null"/>
+                            </h:selectOneRadio>
+                        </h:column>
                         <h:column>
                             <f:facet name="header">Id</f:facet>
                             #{user.id}
@@ -38,29 +61,23 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">Actions</f:facet>
-
-                            <h:commandButton value="Edit" styleClass="btn btn-success"
-                                             action="#{userController.editUser(user)}"
-                                             icon="fas fa-edit">
-                                <f:ajax event="click" render="userForm"/>
-                            </h:commandButton>
-                            <h:commandButton value="Delete" styleClass="btn btn-danger"
-                                             action="#{userController.deleteUser(user)}"
-                                             icon="far fa-trash-alt">
-                                <f:ajax event="click" render="userForm"/>
-                            </h:commandButton>
+                            <p:splitButton value="Save" action="#" icon="pi pi-save" styleClass="ui-button-success">
+                                <p:menuitem value="Edit" action="#{userController.editUser(user)}" update="messages"
+                                            ajax="false" icon="pi pi-refresh"/>
+                                <p:menuitem value="Delete" action="#{userController.deleteUser(user)}" update="messages"
+                                            ajax="false" icon="pi pi-times"/>
+                            </p:splitButton>
                         </h:column>
                     </h:dataTable>
                 </div>
             </h:form>
         </div>
     </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
+    <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
+    <!--            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
+    <!--            crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
             crossorigin="anonymous"></script>

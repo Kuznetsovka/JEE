@@ -9,6 +9,7 @@ import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.transaction.Transactional;
 import javax.transaction.UserTransaction;
 import java.util.Collections;
 
@@ -42,7 +43,7 @@ public class UserRepository extends Repository<User> {
             }
         }
     }
-
+    @Transactional
     public Cart addToUserCart(Product product, User user) {
         if(user == null){
             throw new RuntimeException("User not found.");

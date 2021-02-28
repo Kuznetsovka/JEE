@@ -15,24 +15,27 @@ import java.io.Serializable;
 
 @Named
 @Data
-
-    @SessionScoped
-    public class CartController implements Serializable {
-        @Inject
-        private UserRepository userRepository;
-        @Inject
-        private ProductRepository productRepository;
-        private Cart cart;
-        @Inject
-        private CartRepository cartRepository;
+@SessionScoped
+public class CartController implements Serializable {
+    @Inject
+    private UserRepository userRepository;
+    @Inject
+    private UserController userController;
+    @Inject
+    private ProductRepository productRepository;
+    private Cart cart;
+    @Inject
+    private CartRepository cartRepository;
     public String deleteProductFromCart(Product product) {
         cartRepository.deleteProductFromCart(product);
         return "/cart.xhtml?faces-redirect=true";
     }
-//TODO CartRepository
+    //TODO CartRepository
     public String addToCart(Product product ) {
         // Определение юзера
         User user = userRepository.findById(1L);
+        // Почему-то листнер не работает.
+//      User user =  userController.getUser();
         Cart cart = userRepository.addToUserCart(product, user);
         return "/cart.xhtml?faces-redirect=true";
     }

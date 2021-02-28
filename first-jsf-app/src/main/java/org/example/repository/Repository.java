@@ -7,9 +7,9 @@ import org.slf4j.LoggerFactory;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import javax.transaction.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -29,9 +29,17 @@ public abstract class Repository<T extends Entities> {
         return em.createQuery("from " + nameClass,thisClass).getResultList();
     }
 
-
+    @Transactional
     public T findById(Long id) {
         return em.find(thisClass, id);
+    }
+    @Transactional
+    public List<T> findAllById(List<Long> ids) {
+        List<T> list = new ArrayList<>();
+        for (Long id : ids) {
+            list.add(findById(id));
+        }
+        return list;
     }
 
     public Long countAll() {

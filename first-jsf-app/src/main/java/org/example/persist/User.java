@@ -26,7 +26,7 @@ public class User implements Entities {
     @Column
     @Enumerated(EnumType.STRING)
     private Role role;
-    @OneToOne
+    @OneToOne (cascade = CascadeType.ALL)
     private Cart cart;
 
     public User(Long id, String name, String password, String email, Role role) {
