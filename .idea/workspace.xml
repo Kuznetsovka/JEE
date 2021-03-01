@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Убрал Warnings">
+    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Все задуманые опции работают.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/cart.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/cart.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/menu.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/menu.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/new.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user_form.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user_form.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +33,14 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="89b2724d5ca6408b2d38f73280c0494b755869cf" />
+        <entry key="$PROJECT_DIR$" value="05e5c9674234df44efee3361e4833a0d8084b09a" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GithubProjectSettings">
-    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="lesson3" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="lesson4" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="Kuznetsovka" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="JEE" />
   </component>
@@ -140,17 +132,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -291,7 +272,8 @@
       <workItem from="1614359728682" duration="2502000" />
       <workItem from="1614445158335" duration="13992000" />
       <workItem from="1614506463588" duration="4302000" />
-      <workItem from="1614517998159" duration="14124000" />
+      <workItem from="1614517998159" duration="14887000" />
+      <workItem from="1614576038203" duration="1374000" />
     </task>
     <task id="LOCAL-00001" summary="Рабочая версия. Заработало только на 8 версии.">
       <created>1611865489517</created>
@@ -412,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614536948560</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Все задуманые опции работают.">
+      <created>1614544238164</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1614544238164</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +412,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="text">
+                    <value>
+                      <list>
+                        <option value="git rebase --on" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -450,7 +451,8 @@
     <MESSAGE value="Забыл добавить persistence.xml" />
     <MESSAGE value="Создание корзины с продуктами заработало." />
     <MESSAGE value="Убрал Warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Убрал Warnings" />
+    <MESSAGE value="Все задуманые опции работают." />
+    <option name="LAST_COMMIT_MESSAGE" value="Все задуманые опции работают." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -489,11 +491,6 @@
           <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/Repository.java</url>
           <line>50</line>
           <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/CartController.java</url>

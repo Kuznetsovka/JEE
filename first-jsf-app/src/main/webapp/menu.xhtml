@@ -1,6 +1,6 @@
 <html lang="en"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
+      xmlns:pp="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
     <nav id="nav-menu" class="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,7 +23,7 @@
                         <h:dataTable value="#{categoryController.allCategories}" var="category">
                             <f:event listener="#{categoryController.preloadData}" type="preRenderView"/>
                         <h:column styleClass="dropdown-item">
-                            <p:commandLink styleClass="dropdown-item" value="#{category.title}" action="#{productController.getProductsByCategory(category.id)}" />
+                            <pp:commandLink styleClass="dropdown-item" value="#{category.title}" action="#{productController.getProductsByCategory(category.id)}" />
                         </h:column>
                         </h:dataTable>
                     </div>

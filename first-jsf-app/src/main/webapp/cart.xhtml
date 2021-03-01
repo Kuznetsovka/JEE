@@ -1,6 +1,7 @@
 <html lang="en"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pp="http://primefaces.org/ui"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 <ui:include src="/head.xhtml">
     <ui:param name="header" value="Cart list" />
@@ -38,11 +39,11 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">Actions</f:facet>
-                            <h:commandButton value="Delete" styleClass="btn btn-danger"
-                                             action="#{cartController.deleteProductFromCart(product)}">
-                                <i class="far fa-trash-alt"/>
+                            <pp:commandButton value="Delete" styleClass="btn btn-danger"
+                                              icon="far fa-trash-alt"
+                                              action="#{cartController.deleteProductFromCart(product)}">
                                 <f:ajax event="click" render="cartForm"/>
-                            </h:commandButton>
+                            </pp:commandButton>
                         </h:column>
                     </h:dataTable>
                 </div>

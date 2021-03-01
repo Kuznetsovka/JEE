@@ -2,7 +2,7 @@
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
+      xmlns:pp="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 <ui:include src="/head.xhtml">
@@ -18,7 +18,7 @@
         <div class="row py-2">
             <h:form id="productForm">
                 <div class="col-12">
-                    <p:commandButton value="Add Product" styleClass="btn btn-primary"
+                    <pp:commandButton value="Add Product" styleClass="btn btn-primary"
                                      action="#{productController.createProduct()}"
                                      icon="fas fa-cart-plus"/>
                 </div>
@@ -26,7 +26,7 @@
                 <div class="col-12">
                     <h:dataTable value="#{productController.allProducts}" var="product"
                                  styleClass="table table-bordered my-2">
-                        <p:growl id="messages"/>
+                        <pp:growl id="messages"/>
                         <h:column>
                             <f:facet name="header">Id</f:facet>
                             #{product.id}
@@ -49,16 +49,16 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">Actions</f:facet>
-                            <p:splitButton value="Save" action="#" icon="pi pi-save" styleClass="ui-button-success">
-                                <p:menuitem value="Edit" action="#{productController.editProduct(product)}" update="messages" ajax="false" icon="pi pi-refresh"/>
-                                <p:menuitem value="Delete" action="#{productController.deleteProduct(product)}" update="messages" ajax="false" icon="pi pi-times"/>
-                            </p:splitButton>
-                            <p:commandButton styleClass="btn btn-success"
+                            <pp:splitButton value="Save" action="#" icon="pi pi-save" styleClass="ui-button-success">
+                                <pp:menuitem value="Edit" action="#{productController.editProduct(product)}" update="messages" ajax="false" icon="pi pi-refresh"/>
+                                <pp:menuitem value="Delete" action="#{productController.deleteProduct(product)}" update="messages" ajax="false" icon="pi pi-times"/>
+                            </pp:splitButton>
+                            <pp:commandButton styleClass="btn btn-success"
                                            style="margin-left: 20px"
                                            icon="fas fa-cart-plus"
                                            action="#{cartController.addToCart(product)}">
                                 <f:ajax event="click" render="productForm"/>
-                            </p:commandButton>
+                            </pp:commandButton>
                         </h:column>
                     </h:dataTable>
                 </div>
