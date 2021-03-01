@@ -40,8 +40,7 @@
                         <h:column>
                             <f:facet name="header">Select</f:facet>
                             <h:selectOneRadio value="#{userController.selectUser(user)}"
-                                              onclick="dataTableSelectOneRadio(this);"
-                                              valueChangeListener="#{userController.listenerChangeUser}">
+                                              onclick="dataTableSelectOneRadio(this);">
                                 <f:selectItem itemValue="null"/>
                             </h:selectOneRadio>
                         </h:column>
@@ -66,9 +65,10 @@
                             <f:facet name="header">Actions</f:facet>
                             <pp:splitButton value="Save" action="#" icon="pi pi-save" styleClass="ui-button-success">
                                 <pp:menuitem value="Edit" action="#{userController.editUser(user)}" update="messages"
-                                            ajax="false" icon="pi pi-refresh"/>
-                                <pp:menuitem value="Delete" action="#{userController.deleteUser(user)}" update="messages"
-                                            ajax="false" icon="pi pi-times"/>
+                                             ajax="false" icon="pi pi-refresh"/>
+                                <pp:menuitem value="Delete" action="#{userController.deleteUser(user)}"
+                                             update="messages"
+                                             ajax="false" icon="pi pi-times"/>
                             </pp:splitButton>
                         </h:column>
                     </h:dataTable>

@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Все задуманые опции работают.">
+    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Исправил иконку кнопки в cart.xhtml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/cart.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/cart.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/menu.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/menu.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/new.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user_form.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/user_form.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +272,8 @@
       <workItem from="1614445158335" duration="13992000" />
       <workItem from="1614506463588" duration="4302000" />
       <workItem from="1614517998159" duration="14887000" />
-      <workItem from="1614576038203" duration="1374000" />
+      <workItem from="1614576038203" duration="1492000" />
+      <workItem from="1614629299397" duration="3253000" />
     </task>
     <task id="LOCAL-00001" summary="Рабочая версия. Заработало только на 8 версии.">
       <created>1611865489517</created>
@@ -401,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614544238164</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Исправил иконку кнопки в cart.xhtml">
+      <created>1614577509968</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1614577509969</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +459,8 @@
     <MESSAGE value="Создание корзины с продуктами заработало." />
     <MESSAGE value="Убрал Warnings" />
     <MESSAGE value="Все задуманые опции работают." />
-    <option name="LAST_COMMIT_MESSAGE" value="Все задуманые опции работают." />
+    <MESSAGE value="Исправил иконку кнопки в cart.xhtml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправил иконку кнопки в cart.xhtml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -464,38 +472,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CartRepository.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/UserRepository.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/UserRepository.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CartRepository.java</url>
           <line>42</line>
           <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/UserRepository.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/Repository.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/CartController.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CartRepository.java</url>
@@ -508,19 +486,14 @@
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/ProductRepository.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="43" />
+          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/ProductRepository.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/CartController.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="45" />
+          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

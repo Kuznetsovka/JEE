@@ -25,7 +25,7 @@ public class Product implements Entities {
     private String name;
     @Column(length = 1024)
     private String description;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "category_id")
     private Category category;
     @Column
