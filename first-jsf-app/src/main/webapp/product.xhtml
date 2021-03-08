@@ -2,28 +2,31 @@
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
+      xmlns:pp="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
-<ui:include src="/style.xhtml"/>
 <ui:include src="/head.xhtml">
     <ui:param name="header" value="Product list"/>
 </ui:include>
 <h:body>
-    <ui:include src="/menu.xhtml"/>
+    <f:event listener="#{productController.preloadData}" type="preRenderView"/>
 
+    <ui:include src="/menu.xhtml">
+        <ui:param name="pageName" value="Product"/>
+    </ui:include>
     <div class="container">
         <div class="row py-2">
             <h:form id="productForm">
                 <div class="col-12">
-                    <h:commandButton value="Add Product" styleClass="btn btn-primary"
-                                     action="#{productController.createProduct()}"/>
+                    <pp:commandButton value="Add Product" styleClass="btn btn-primary"
+                                     action="#{productController.createProduct()}"
+                                     icon="fas fa-cart-plus"/>
                 </div>
 
                 <div class="col-12">
                     <h:dataTable value="#{productController.allProducts}" var="product"
                                  styleClass="table table-bordered my-2">
-                        <p:growl id="messages"/>
+                        <pp:growl id="messages"/>
                         <h:column>
                             <f:facet name="header">Id</f:facet>
                             #{product.id}
@@ -46,14 +49,16 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">Actions</f:facet>
-                            <p:splitButton value="Save" action="#" icon="pi pi-save" styleClass="ui-splitbutton">
-                                <p:menuitem value="Edit" action="#{productController.editProduct(product)}" update="messages" ajax="false" icon="pi pi-refresh"/>
-                                <p:menuitem value="Delete" action="#{productController.deleteProduct(product)}" update="messages" ajax="false" icon="pi pi-times"/>
-                            </p:splitButton>
-                            <h:commandButton value="Add to cart" styleClass="btn btn-success"
-                                             action="#{cartController.addToCart(product)}">
-                            <i class="pi pi-shopping-cart"></i>
-                            </h:commandButton>
+                            <pp:splitButton value="Save" action="#" icon="pi pi-save" styleClass="ui-button-success">
+                                <pp:menuitem value="Edit" action="#{productController.editProduct(product)}" update="messages" ajax="false" icon="pi pi-refresh"/>
+                                <pp:menuitem value="Delete" action="#{productController.deleteProduct(product)}" update="messages" ajax="false" icon="pi pi-times"/>
+                            </pp:splitButton>
+                            <pp:commandButton styleClass="btn btn-success"
+                                           style="margin-left: 20px"
+                                           icon="fas fa-cart-plus"
+                                           action="#{cartController.addToCart(product)}">
+                                <f:ajax event="click" render="productForm"/>
+                            </pp:commandButton>
                         </h:column>
                     </h:dataTable>
                 </div>
@@ -63,9 +68,9 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
+    <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
+    <!--            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
+    <!--            crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
             crossorigin="anonymous"></script>

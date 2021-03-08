@@ -1,24 +1,32 @@
 package org.example.persist;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import java.util.Objects;
+import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@EqualsAndHashCode
+@Entity
+@Table(name="users")
 public class User implements Entities {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
     private String name;
+    @Column
     private String password;
+    @Column
     private String email;
+    @Column
     private boolean archive;
+    @Column
+    @Enumerated(EnumType.STRING)
     private Role role;
+    @OneToOne (cascade = CascadeType.ALL)
     private Cart cart;
 
     public User(Long id, String name, String password, String email, Role role) {

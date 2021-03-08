@@ -7,6 +7,7 @@ import org.example.repository.ProductRepository;
 import org.example.repository.UserRepository;
 
 import javax.enterprise.context.SessionScoped;
+import javax.faces.event.ComponentSystemEvent;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
@@ -22,21 +23,30 @@ public class ProductController implements Serializable {
     @Inject
     ButtonView buttonView;
     private Product product;
+    private List<Product> products;
     @Inject
     private UserRepository userRepository;
+    private boolean filter;
+
+    public void preloadData(ComponentSystemEvent componentSystemEvent) {
+        if (!filter)
+            products = productRepository.findAll();
+        filter = false;
+    }
 
     public String createProduct() {
         this.product = new Product();
         return "/product_form.xhtml?faces-redirect=true";
     }
 
-    public String getProductByIdCategory(Long id) {
-        this.product = new Product();
-        return "/product_form.xhtml?faces-redirect=true";
+    public List<Product> getAllProducts() {
+        return products;
     }
 
-    public List<Product> getAllProducts() {
-        return productRepository.findAll();
+    public String getProductsByCategory(Long id) {
+        products = productRepository.productsByCategory(id);
+        filter = true;
+        return "/product.xhtml?faces-redirect=true";
     }
 
     public String editProduct(Product product) {
