@@ -23,8 +23,6 @@ public class UserController implements Serializable {
 
     @Inject
     private UserRepository userRepository;
-    @Inject
-    private CartController cartController;
     private User user;
     private User selectedUser;
     private List<User> users;
