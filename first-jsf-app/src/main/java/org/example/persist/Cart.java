@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.dto.CartDto;
 
 import javax.persistence.*;
 import java.util.List;
@@ -23,4 +24,12 @@ public class Cart implements Entities {
             inverseJoinColumns = @JoinColumn(name = "product_id"))
     private List<Product> products;
 
+    public Cart(CartDto cartDto, List<Product> products) {
+        this(cartDto.getId());
+        this.products = products;
+    }
+
+    public Cart(Long id) {
+        this.id=id;
+    }
 }

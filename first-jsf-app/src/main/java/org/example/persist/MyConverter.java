@@ -11,7 +11,7 @@ import java.util.WeakHashMap;
 @FacesConverter(value = "MyConverter")
 public class MyConverter implements Converter {
 
-    private static Map<Object, String> entities = new WeakHashMap<Object, String>();
+    private static final Map<Object, String> entities = new WeakHashMap<>();
 
     @Override
     public String getAsString(FacesContext context, UIComponent component, Object entity) {

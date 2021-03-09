@@ -1,11 +1,10 @@
 package org.example.persist;
 
 import lombok.*;
-import org.hibernate.annotations.Columns;
+import org.example.dto.ProductDto;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -36,7 +35,10 @@ public class Product implements Entities {
         this.name = name;
         this.description = description;
         this.price = price;
-
+    }
+    public Product(ProductDto productDto, Category category) {
+        this(productDto.getId(), productDto.getName(), productDto.getDescription(), productDto.getPrice());
+        this.category = category;
     }
     public Product(Long id) {
         this.id = id;

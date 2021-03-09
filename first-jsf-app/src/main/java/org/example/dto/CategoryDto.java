@@ -1,21 +1,15 @@
-package org.example.persist;
+package org.example.dto;
 
 import lombok.*;
 
-import javax.persistence.*;
 import java.util.Objects;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Entity
-@Table(name="categories")
-public class Category implements Entities {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class CategoryDto {
     private Long id;
-    @Column
     private String title;
 
     @Override
@@ -32,7 +26,7 @@ public class Category implements Entities {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Category category = (Category) o;
+        CategoryDto category = (CategoryDto) o;
         return Objects.equals(id, category.id) && Objects.equals(title, category.title);
     }
 }

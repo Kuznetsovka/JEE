@@ -1,6 +1,8 @@
 package org.example.persist;
 
 import lombok.*;
+import org.example.dto.CartDto;
+import org.example.dto.UserDto;
 
 import javax.persistence.*;
 
@@ -35,6 +37,11 @@ public class User implements Entities {
         this.password = password;
         this.email = email;
         this.role = role;
+    }
+
+    public User(UserDto userDto, Cart cart) {
+        this(userDto.getId(), userDto.getName(), userDto.getPassword(), userDto.getEmail(),userDto.getRole());
+        this.cart = cart;
     }
     public User(Long id) {
         this.id = id;

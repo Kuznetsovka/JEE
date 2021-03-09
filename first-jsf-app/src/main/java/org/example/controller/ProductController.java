@@ -2,10 +2,11 @@ package org.example.controller;
 
 import lombok.Data;
 import org.example.ButtonView;
+import org.example.dto.ProductDto;
 import org.example.persist.Product;
-import org.example.repository.ProductRepository;
-import org.example.repository.UserRepository;
+import org.example.services.ProductService;
 
+import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.event.ComponentSystemEvent;
 import javax.inject.Inject;
@@ -17,39 +18,36 @@ import java.util.List;
 @Data
 @SessionScoped
 public class ProductController implements Serializable {
-
-    @Inject
-    private ProductRepository productRepository;
+    @EJB
+    private ProductService productService;
     @Inject
     ButtonView buttonView;
-    private Product product;
-    private List<Product> products;
-    @Inject
-    private UserRepository userRepository;
+    private ProductDto product;
+    private List<ProductDto> products;
     private boolean filter;
 
     public void preloadData(ComponentSystemEvent componentSystemEvent) {
         if (!filter)
-            products = productRepository.findAll();
+            products = productService.findAll();
         filter = false;
     }
 
     public String createProduct() {
-        this.product = new Product();
+        this.product = new ProductDto();
         return "/product_form.xhtml?faces-redirect=true";
     }
 
-    public List<Product> getAllProducts() {
+    public List<ProductDto> getAllProducts() {
         return products;
     }
 
     public String getProductsByCategory(Long id) {
-        products = productRepository.productsByCategory(id);
+        products = productService.productsByCategory(id);
         filter = true;
         return "/product.xhtml?faces-redirect=true";
     }
 
-    public String editProduct(Product product) {
+    public String editProduct(ProductDto product) {
         this.product = product;
         buttonView.update();
         return "/product_form.xhtml?faces-redirect=true";
@@ -57,11 +55,11 @@ public class ProductController implements Serializable {
 
     public void deleteProduct(Product product) {
         buttonView.delete();
-        productRepository.deleteById(product.getId());
+        productService.deleteById(product.getId());
     }
 
     public String saveProduct() {
-        productRepository.saveOrUpdate(product);
+        productService.saveOrUpdate(product);
         return "/product.xhtml?faces-redirect=true";
     }
 }
