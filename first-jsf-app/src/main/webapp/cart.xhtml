@@ -41,7 +41,7 @@
                             <f:facet name="header">Actions</f:facet>
                             <pp:commandButton value="Delete" styleClass="btn btn-danger"
                                               icon="far fa-trash-alt"
-                                              action="#{cartController.deleteProductFromCart(product)}">
+                                              action="#{userController.deleteProductFromCart(product)}">
                                 <f:ajax event="click" render="cartForm"/>
                             </pp:commandButton>
                         </h:column>

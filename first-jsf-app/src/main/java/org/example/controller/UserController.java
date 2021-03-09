@@ -3,13 +3,17 @@ package org.example.controller;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import org.example.persist.User;
-import org.example.repository.UserRepository;
+import org.example.dto.CartDto;
+import org.example.dto.UserDto;
+import org.example.persist.Cart;
+import org.example.persist.Product;
+import org.example.services.CartService;
+import org.example.services.UserService;
 
+import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.event.ComponentSystemEvent;
 import javax.faces.event.ValueChangeEvent;
-import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
@@ -20,45 +24,58 @@ import java.util.List;
 @Setter
 @SessionScoped
 public class UserController implements Serializable {
-
-    @Inject
-    private UserRepository userRepository;
-    private User user;
-    private User selectedUser;
-    private List<User> users;
+    @EJB
+    private UserService userService;
+    private UserDto user;
+    private UserDto selectedUser;
+    private List<UserDto> users;
+    private CartDto cart;
 
     public void preloadData(ComponentSystemEvent componentSystemEvent) {
-        users = userRepository.findAll();
+        users = userService.findAll();
     }
 
     public String createUser() {
-        this.user = new User();
+        this.user = new UserDto();
         return "/user_form.xhtml?faces-redirect-true";
     }
 
-    public List<User> getAllUsers() {
+    public List<UserDto> getAllUsers() {
         return users;
     }
 
-    public String editUser(User user) {
+    public String editUser(UserDto user) {
         this.user = user;
         return "/user_form.xhtml?faces-redirect-true";
     }
 
-    public void selectUser(User user) {
+    public void selectUser(UserDto user) {
         this.user = user;
     }
 
-    public void deleteUser(User user) {
-        userRepository.deleteById(user.getId());
+    public void deleteUser(UserDto user) {
+        userService.deleteById(user.getId());
     }
 
     public String saveUser() {
-        userRepository.saveOrUpdate(user);
+        userService.saveOrUpdate(user);
         return "/user.xhtml?faces-redirect-true";
     }
 
     public void listenerChangeUser(ValueChangeEvent valueChangeEvent) {
-        user = (User) valueChangeEvent.getNewValue();
+        user = (UserDto) valueChangeEvent.getNewValue();
+    }
+
+    public String addToCart(Product product) {
+        // Определение юзера
+        UserDto user = userService.findById(1L);
+        Cart cart = userService.addToUserCart(product, user);
+        this.cart = new CartDto(cart);
+        return "/cart.xhtml?faces-redirect=true";
+    }
+
+    public String deleteProductFromCart(Product product) {
+        userService.deleteProductFromCart(cart, product);
+        return "/cart.xhtml?faces-redirect=true";
     }
 }

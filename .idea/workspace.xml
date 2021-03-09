@@ -4,9 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Добавил пару каскадов">
+    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Удалил не востребаванный контроллер">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/CartController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Entities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/MyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/MyConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/persist/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CartRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/cart.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/cart.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/webapp/product.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,15 +37,16 @@
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="XHTML File" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="05e5c9674234df44efee3361e4833a0d8084b09a" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,7 +72,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="extract.method.default.visibility" value="public" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GEEKBRAINS/Java_EE/wildfly-22.0.0.Final/standalone/configuration/standalone.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -63,12 +81,15 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.persist" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Java\Java-EE\first-jsf-app\src\main\java\org\example\repository" />
+      <recent name="C:\Java\Java-EE\first-jsf-app\src\main\java\org\example\dto" />
       <recent name="C:\Java\Java-EE\first-jsf-app\src\main\webapp" />
       <recent name="C:\Java\Java-EE\first-jsf-app\src\main\webapp\WEB-INF" />
       <recent name="C:\Java\Java-EE\jsf\src\main\java\org\example" />
-      <recent name="C:\Java\Java-EE\jsf\src\main\java" />
-      <recent name="C:\Java\Java-EE\first-jsf-app\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Java\Java-EE\first-jsf-app\src\main\webapp\WEB-INF" />
@@ -84,14 +105,14 @@
       <recent name="org.example.persist" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.example" />
       <recent name="org.example.repository" />
+      <recent name="org.example" />
       <recent name="org.example.persist" />
       <recent name="org.example.controller" />
       <recent name="org.example.filter" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.first-jsf-app">
+  <component name="RunManager" selected="Remote JVM Debug.debug">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="first-web-app" />
@@ -123,7 +144,7 @@
       <module name="first-jsf-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.repository.*" />
+          <option name="PATTERN" value="org.example.repository.CategoryRepository" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -487,29 +508,9 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CartRepository.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CartRepository.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CartRepository.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/UserController.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="49" />
+          <line>70</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

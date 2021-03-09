@@ -1,19 +1,19 @@
 package org.example.repository;
 
+
 import org.example.persist.Cart;
 import org.example.persist.Product;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.transaction.Transactional;
+import javax.ejb.EJB;
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
 import java.util.ArrayList;
 import java.util.List;
 
-@Named
-@ApplicationScoped
+@Stateless
+@LocalBean
 public class CartRepository extends Repository<Cart> {
-    @Inject
+    @EJB
     private ProductRepository productRepository;
 
     public CartRepository() {
@@ -28,7 +28,6 @@ public class CartRepository extends Repository<Cart> {
         return cart;
     }
 
-    @Transactional
     public void addProducts(Cart cart, List<Long> productIds) {
         List<Product> products = cart.getProducts();
         List<Product> newProductsList = products == null ? new ArrayList<> () : new ArrayList<> (products);
@@ -36,12 +35,8 @@ public class CartRepository extends Repository<Cart> {
         cart.setProducts(newProductsList);
         this.saveOrUpdate(cart);
     }
-    @Transactional
-    public void deleteProductFromCart(Cart cart, Product product) {
-        if(cart == null || cart.getProducts().isEmpty()){
-            return;
-        }
-        cart.getProducts ().remove (product);
-        this.saveOrUpdate(cart);
+    public List<Product> getProducts(Long id){
+        Cart cart = this.findById(id);
+        return cart.getProducts();
     }
 }
