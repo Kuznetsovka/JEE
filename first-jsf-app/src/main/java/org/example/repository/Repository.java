@@ -3,12 +3,14 @@ package org.example.repository;
 import org.example.persist.Entities;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.ejb.LocalBean;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@LocalBean
 public abstract class Repository<T extends Entities> {
     private final Class<T> thisClass;
     private final Logger logger = LoggerFactory.getLogger(this.getClass());

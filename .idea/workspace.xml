@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Пока возился с очередью сломалось все что могло сломаться.  Сломались настройки standalone.xml и standalone-full.xml. Теперь Wild-Fly вообще не запускается.">
+    <list default="true" id="f71b68b2-8d8c-4fbd-9f18-37bab9378450" name="Default Changelist" comment="Получаю ошибку: Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYEJB0406">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/jms/JmsProductReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/jms/JmsProductReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/rest/ServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/rest/ProductServiceRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/service/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/first-web-app.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/first-web-app/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service-api/src/main/java/org/example/service/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service-api/src/main/java/org/example/service/ProductDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +102,7 @@
       <recent name="org.example.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.EjbClient">
+  <component name="RunManager" selected="Maven.first-jsf-app">
     <configuration name="EjbClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.EjbClient" />
       <module name="remote-client" />
@@ -307,7 +309,7 @@
       <workItem from="1614777449189" duration="5158000" />
       <workItem from="1615727574576" duration="3404000" />
       <workItem from="1615732553872" duration="3122000" />
-      <workItem from="1615735708036" duration="10323000" />
+      <workItem from="1615735708036" duration="13999000" />
     </task>
     <task id="LOCAL-00001" summary="Рабочая версия. Заработало только на 8 версии.">
       <created>1611865489517</created>
@@ -463,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615742268704</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Получаю ошибку: Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYEJB0406">
+      <created>1615746227278</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1615746227278</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,20 +527,26 @@
     <MESSAGE value="Добавил пару каскадов" />
     <MESSAGE value="Еле завелось." />
     <MESSAGE value="Пока возился с очередью сломалось все что могло сломаться.  Сломались настройки standalone.xml и standalone-full.xml. Теперь Wild-Fly вообще не запускается." />
-    <option name="LAST_COMMIT_MESSAGE" value="Пока возился с очередью сломалось все что могло сломаться.  Сломались настройки standalone.xml и standalone-full.xml. Теперь Wild-Fly вообще не запускается." />
+    <MESSAGE value="Получаю ошибку: Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYEJB0406" />
+    <option name="LAST_COMMIT_MESSAGE" value="Получаю ошибку: Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYEJB0406" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/first-jsf-app/src/main/java/org/example/repository/Repository.java</url>
-          <line>68</line>
+          <line>70</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/remote-client/src/main/java/org/example/JmsClient.java</url>
           <line>15</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/product-service-api/src/main/java/org/example/service/ProductDto.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

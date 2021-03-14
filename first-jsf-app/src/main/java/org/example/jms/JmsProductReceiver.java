@@ -1,7 +1,7 @@
 package org.example.jms;
 
 import org.example.service.ProductDto;
-import org.example.service.ProductServiceImpl;
+import org.example.service.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +24,7 @@ public class JmsProductReceiver implements MessageListener {
     private final Logger logger = LoggerFactory.getLogger(JmsProductReceiver.class);
 
     @EJB
-    private ProductServiceImpl productService;
+    private ProductService productService;
 
     @Override
     public void onMessage(Message message) {

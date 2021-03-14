@@ -5,9 +5,6 @@ import lombok.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-@Data
-@Builder
-@EqualsAndHashCode
 public class ProductDto implements Serializable {
 
     private Long id;

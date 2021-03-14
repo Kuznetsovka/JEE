@@ -4,7 +4,7 @@ import lombok.Data;
 import org.example.ButtonView;
 import org.example.persist.Product;
 import org.example.service.ProductDto;
-import org.example.service.ProductServiceImpl;
+import org.example.service.ProductService;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
@@ -19,7 +19,7 @@ import java.util.List;
 @SessionScoped
 public class ProductController implements Serializable {
     @EJB
-    private ProductServiceImpl productService;
+    private ProductService productService;
     @Inject
     ButtonView buttonView;
     private ProductDto product;
