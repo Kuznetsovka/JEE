@@ -21,7 +21,7 @@ public class ProductController implements Serializable {
     @EJB
     private ProductService productService;
     @Inject
-    ButtonView buttonView;
+    private ButtonView buttonView;
     private ProductDto product;
     private List<ProductDto> products;
     private boolean filter;
@@ -41,11 +41,11 @@ public class ProductController implements Serializable {
         return products;
     }
 
-//    public String getProductsByCategory(Long id) {
-//        products = productService.productsByCategory(id);
-//        filter = true;
-//        return "/product.xhtml?faces-redirect=true";
-//    }
+    public String getProductsByCategory(Long id) {
+        products = productService.productsByCategory(id);
+        filter = true;
+        return "/product.xhtml?faces-redirect=true";
+    }
 
     public String editProduct(ProductDto product) {
         this.product = product;
@@ -53,7 +53,7 @@ public class ProductController implements Serializable {
         return "/product_form.xhtml?faces-redirect=true";
     }
 
-    public void deleteProduct(Product product) {
+    public void deleteProduct(ProductDto product) {
         buttonView.delete();
         productService.deleteById(product.getId());
     }

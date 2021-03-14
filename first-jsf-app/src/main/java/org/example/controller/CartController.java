@@ -17,8 +17,9 @@ public class CartController implements Serializable {
     private CartService cartService;
 
 
-    public void addToCart(ProductDto product) {
+    public String addToCart(ProductDto product) {
         cartService.addToCart(product);
+        return "/cart.xhtml?faces-redirect=true";
     }
 
     public void removeFromCart(ProductDto product) {

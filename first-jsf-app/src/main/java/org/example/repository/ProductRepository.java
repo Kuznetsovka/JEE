@@ -8,7 +8,7 @@ import javax.ejb.Stateless;
 import java.util.List;
 
 @Stateless
-public class ProductRepository extends Repository<Product>{
+public class ProductRepository extends Repository<Product> {
 
     public ProductRepository() {
         super(Product.class);
@@ -18,7 +18,11 @@ public class ProductRepository extends Repository<Product>{
 
     public List<Product> productsByCategory(Long id) {
         return em.createNamedQuery("productsByCategory", Product.class)
-                .setParameter("id",id)
+                .setParameter("id", id)
                 .getResultList();
+    }
+
+    public Product productByName(String name) {
+        return em.createQuery("select p from Product p where p.name = '" + name + "'",Product.class).getSingleResult();
     }
 }

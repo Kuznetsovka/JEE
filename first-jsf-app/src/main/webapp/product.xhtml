@@ -9,7 +9,7 @@
     <ui:param name="header" value="Product list"/>
 </ui:include>
 <h:body>
-<!--    <f:event listener="#{productController.preloadData}" type="preRenderView"/>-->
+    <f:event listener="#{productController.preloadData}" type="preRenderView"/>
 
     <ui:include src="/menu.xhtml">
         <ui:param name="pageName" value="Product"/>
@@ -41,7 +41,7 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">Category</f:facet>
-                            #{product.category.title}
+                            #{product.categoryName}
                         </h:column>
                         <h:column>
                             <f:facet name="header">Price</f:facet>

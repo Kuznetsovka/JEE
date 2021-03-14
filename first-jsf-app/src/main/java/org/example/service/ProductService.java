@@ -12,6 +12,8 @@ public interface ProductService {
 
     Long countAll();
 
+    List<ProductDto> productsByCategory(Long id);
+
     void saveOrUpdate(ProductDto product);
 
     void deleteById(Long id);

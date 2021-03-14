@@ -16,9 +16,19 @@ public interface ProductServiceRest {
     List<ProductDto> findAll();
 
     @GET
+    @Path("/byCategory/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    List<ProductDto> productsByCategory(@PathParam("id") Long id);
+
+    @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     ProductDto findById(@PathParam("id") Long id);
+
+    @GET
+    @Path("/name/{name}")
+    @Produces(MediaType.APPLICATION_JSON)
+    ProductDto findByName(@PathParam("name") String name);
 
     @GET
     @Path("/count")

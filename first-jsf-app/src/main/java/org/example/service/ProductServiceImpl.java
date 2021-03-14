@@ -52,6 +52,16 @@ public class ProductServiceImpl implements ProductService, ProductServiceRemote,
         return null;
     }
 
+    @TransactionAttribute
+    @Override
+    public ProductDto findByName(String name) {
+        Product product = productRepository.productByName(name);
+        if (product != null) {
+            return buildProductDto(product);
+        }
+        return null;
+    }
+
     @Override
     public Long countAll() {
         return productRepository.countAll();
@@ -84,12 +94,13 @@ public class ProductServiceImpl implements ProductService, ProductServiceRemote,
         productRepository.saveOrUpdate(new Product(product, category));
     }
 
-//    @TransactionAttribute
-//    public List<ProductDto> productsByCategory(Long id) {
-//        return productRepository.productsByCategory(id).stream()
-//                .map(ProductDto::new)
-//                .collect(Collectors.toList());
-//    }
+    @TransactionAttribute
+    @Override
+    public List<ProductDto> productsByCategory(Long id) {
+        return productRepository.productsByCategory(id).stream()
+                .map(this::buildProductDto)
+                .collect(Collectors.toList());
+    }
 
     @TransactionAttribute
     @Override
