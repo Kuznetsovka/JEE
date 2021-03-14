@@ -2,9 +2,9 @@ package org.example.controller;
 
 import lombok.Data;
 import org.example.ButtonView;
-import org.example.dto.ProductDto;
 import org.example.persist.Product;
-import org.example.services.ProductService;
+import org.example.service.ProductDto;
+import org.example.service.ProductServiceImpl;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
@@ -19,7 +19,7 @@ import java.util.List;
 @SessionScoped
 public class ProductController implements Serializable {
     @EJB
-    private ProductService productService;
+    private ProductServiceImpl productService;
     @Inject
     ButtonView buttonView;
     private ProductDto product;
@@ -41,11 +41,11 @@ public class ProductController implements Serializable {
         return products;
     }
 
-    public String getProductsByCategory(Long id) {
-        products = productService.productsByCategory(id);
-        filter = true;
-        return "/product.xhtml?faces-redirect=true";
-    }
+//    public String getProductsByCategory(Long id) {
+//        products = productService.productsByCategory(id);
+//        filter = true;
+//        return "/product.xhtml?faces-redirect=true";
+//    }
 
     public String editProduct(ProductDto product) {
         this.product = product;

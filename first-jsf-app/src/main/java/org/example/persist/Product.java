@@ -1,7 +1,7 @@
 package org.example.persist;
 
 import lombok.*;
-import org.example.dto.ProductDto;
+import org.example.service.ProductDto;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

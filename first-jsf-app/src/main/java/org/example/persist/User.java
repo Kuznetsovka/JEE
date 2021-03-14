@@ -1,7 +1,6 @@
 package org.example.persist;
 
 import lombok.*;
-import org.example.dto.CartDto;
 import org.example.dto.UserDto;
 
 import javax.persistence.*;
@@ -28,8 +27,7 @@ public class User implements Entities {
     @Column
     @Enumerated(EnumType.STRING)
     private Role role;
-    @OneToOne (cascade = CascadeType.ALL)
-    private Cart cart;
+
 
     public User(Long id, String name, String password, String email, Role role) {
         this.id = id;
@@ -39,11 +37,7 @@ public class User implements Entities {
         this.role = role;
     }
 
-    public User(UserDto userDto, Cart cart) {
+    public User(UserDto userDto) {
         this(userDto.getId(), userDto.getName(), userDto.getPassword(), userDto.getEmail(),userDto.getRole());
-        this.cart = cart;
-    }
-    public User(Long id) {
-        this.id = id;
     }
 }

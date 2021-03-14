@@ -9,7 +9,7 @@
     <ui:param name="header" value="Product list"/>
 </ui:include>
 <h:body>
-    <f:event listener="#{productController.preloadData}" type="preRenderView"/>
+<!--    <f:event listener="#{productController.preloadData}" type="preRenderView"/>-->
 
     <ui:include src="/menu.xhtml">
         <ui:param name="pageName" value="Product"/>
@@ -56,7 +56,7 @@
                             <pp:commandButton styleClass="btn btn-success"
                                            style="margin-left: 20px"
                                            icon="fas fa-cart-plus"
-                                           action="#{userController.addToCart(product)}">
+                                           action="#{cartController.addToCart(product)}">
                                 <f:ajax event="click" render="productForm"/>
                             </pp:commandButton>
                         </h:column>

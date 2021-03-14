@@ -1,4 +1,4 @@
-package org.example.services;
+package org.example.service;
 
 import javax.ejb.Local;
 import java.util.List;

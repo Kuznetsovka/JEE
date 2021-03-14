@@ -15,7 +15,7 @@
         <div class="row py-2">
             <h:form id="cartForm">
                 <div class="col-12">
-                    <h:dataTable value="#{cartRepository.findById(1).products}" var="product"
+                    <h:dataTable value="#{cartController.getAllProducts()}" var="product"
                                  styleClass="table table-bordered my-2">
                         <h:column>
                             <f:facet name="header">Id</f:facet>
@@ -41,7 +41,7 @@
                             <f:facet name="header">Actions</f:facet>
                             <pp:commandButton value="Delete" styleClass="btn btn-danger"
                                               icon="far fa-trash-alt"
-                                              action="#{userController.deleteProductFromCart(product)}">
+                                              action="#{cartController.removeFromCart(product)}">
                                 <f:ajax event="click" render="cartForm"/>
                             </pp:commandButton>
                         </h:column>
