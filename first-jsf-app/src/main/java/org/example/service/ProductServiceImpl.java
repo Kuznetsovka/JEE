@@ -4,7 +4,7 @@ import org.example.persist.Category;
 import org.example.persist.Product;
 import org.example.repository.CategoryRepository;
 import org.example.repository.ProductRepository;
-import org.example.rest.ServiceRest;
+import org.example.rest.ProductServiceRest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 @Stateless
 @Remote(ProductServiceRemote.class)
-public class ProductServiceImpl implements Service<ProductDto>, ServiceRest<ProductDto> {
+public class ProductServiceImpl implements ProductService, ProductServiceRemote, ProductServiceRest {
 
     private static final Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
 

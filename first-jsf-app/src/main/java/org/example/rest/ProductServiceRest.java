@@ -1,5 +1,7 @@
 package org.example.rest;
 
+import org.example.service.ProductDto;
+
 import javax.ejb.Local;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -7,16 +9,16 @@ import java.util.List;
 
 @Local
 @Path("/v1/product")
-public interface ServiceRest<T> {
+public interface ProductServiceRest {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    List<T> findAll();
+    List<ProductDto> findAll();
 
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    T findById(@PathParam("id") Long id);
+    ProductDto findById(@PathParam("id") Long id);
 
     @GET
     @Path("/count")
@@ -25,11 +27,11 @@ public interface ServiceRest<T> {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    void insert(T entity);
+    void insert(ProductDto product);
 
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
-    void update(T entity);
+    void update(ProductDto product);
 
     @DELETE
     @Path("/{id}")
