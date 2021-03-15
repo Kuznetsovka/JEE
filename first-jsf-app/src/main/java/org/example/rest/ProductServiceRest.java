@@ -1,5 +1,6 @@
 package org.example.rest;
 
+import org.example.persist.Product;
 import org.example.service.ProductDto;
 
 import javax.ejb.Local;
@@ -30,6 +31,10 @@ public interface ProductServiceRest {
     @Produces(MediaType.APPLICATION_JSON)
     ProductDto findByName(@PathParam("name") String name);
 
+    @GET
+    @Path("/addCategory/{id}/{idCat}")
+    @Produces(MediaType.APPLICATION_JSON)
+    ProductDto addCategory(@PathParam("id")  Long id, @PathParam("idCat")  Long idCategory);
     @GET
     @Path("/count")
     @Produces(MediaType.APPLICATION_JSON)

@@ -96,6 +96,18 @@ public class ProductServiceImpl implements ProductService, ProductServiceRemote,
 
     @TransactionAttribute
     @Override
+    public ProductDto addCategory(Long id,Long idCategory) {
+        logger.info("Saving category with id {}" , id);
+        Product dto = productRepository.findById(id);
+        ProductDto product = buildProductDto(dto);
+        if (dto != null) {
+            productRepository.saveOrUpdate(new Product(product, categoryRepository.findById(idCategory)));
+        }
+        return product;
+    }
+
+    @TransactionAttribute
+    @Override
     public List<ProductDto> productsByCategory(Long id) {
         return productRepository.productsByCategory(id).stream()
                 .map(this::buildProductDto)
