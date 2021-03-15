@@ -17,6 +17,6 @@ public class OrderDto {
     private UserDto user;
     private BigDecimal sum;
     private String address;
-    private List<OrderDetails> details;
+//    private List<OrderDetails> details;
     private OrderStatus status;
 }

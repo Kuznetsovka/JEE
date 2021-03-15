@@ -1,9 +1,9 @@
-package org.example.services;
+package org.example.service;
 
 import javax.ejb.Local;
 import java.util.List;
 
-@Local
+
 public interface Service <T> {
 
     List<T> findAll();

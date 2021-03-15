@@ -2,9 +2,9 @@ package org.example.controller;
 
 import lombok.Data;
 import org.example.ButtonView;
-import org.example.dto.ProductDto;
 import org.example.persist.Product;
-import org.example.services.ProductService;
+import org.example.service.ProductDto;
+import org.example.service.ProductService;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
@@ -21,7 +21,7 @@ public class ProductController implements Serializable {
     @EJB
     private ProductService productService;
     @Inject
-    ButtonView buttonView;
+    private ButtonView buttonView;
     private ProductDto product;
     private List<ProductDto> products;
     private boolean filter;
@@ -53,7 +53,7 @@ public class ProductController implements Serializable {
         return "/product_form.xhtml?faces-redirect=true";
     }
 
-    public void deleteProduct(Product product) {
+    public void deleteProduct(ProductDto product) {
         buttonView.delete();
         productService.deleteById(product.getId());
     }

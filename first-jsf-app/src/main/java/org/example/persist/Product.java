@@ -1,7 +1,7 @@
 package org.example.persist;
 
 import lombok.*;
-import org.example.dto.ProductDto;
+import org.example.service.ProductDto;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name="products")
 @NamedQueries({
-        @NamedQuery(name = "productsByCategory", query = "select p from Product p join p.category pc where pc.id=:id")
+        @NamedQuery(name = "productsByCategory", query = "select p from Product p join p.category pc where pc.id=:id"),
 })
 public class Product implements Entities {
     @Id

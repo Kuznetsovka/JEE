@@ -1,12 +1,8 @@
 package org.example.dto;
 
 import lombok.*;
-import org.example.persist.Cart;
-import org.example.persist.Category;
 import org.example.persist.Role;
 import org.example.persist.User;
-
-import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
@@ -21,7 +17,6 @@ public class UserDto {
     private String email;
     private String password;
     private Role role;
-    private Cart cart;
 
     public UserDto(User user) {
         this.id = user.getId();
@@ -29,7 +24,5 @@ public class UserDto {
         this.password = user.getPassword();
         this.email = user.getEmail();
         this.role = user.getRole();
-        Cart cart = user.getCart();
-        cartId = cart != null ? cart.getId() : null;
     }
 }

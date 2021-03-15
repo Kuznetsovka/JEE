@@ -43,9 +43,9 @@
                     </div>
                     <div class="form-group">
                         <label>Category</label>
-                        <h:selectOneMenu styleClass="form-select" value = "#{productController.product.category}" converter="MyConverter">
+                        <h:selectOneMenu styleClass="form-select" value = "#{productController.product.categoryId}">
                             <f:selectItems value ="#{categoryController.allCategories}" var="category"
-                                          itemLabel="#{categoryController.category.title}" itemValue="#{category}"/>
+                                          itemLabel="#{categoryController.category.title}" itemValue="#{category.id}"/>
                         </h:selectOneMenu>
                     </div>
                     <div class="form-group">

@@ -1,14 +1,17 @@
 package org.example.repository;
 
 import org.example.persist.Entities;
+import org.example.persist.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.ejb.LocalBean;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@LocalBean
 public abstract class Repository<T extends Entities> {
     private final Class<T> thisClass;
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -29,7 +32,6 @@ public abstract class Repository<T extends Entities> {
     public T findById(Long id) {
         return em.find(thisClass, id);
     }
-
 
     public List<T> findAllById(List<Long> ids) {
         List<T> list = new ArrayList<>();
@@ -68,5 +70,4 @@ public abstract class Repository<T extends Entities> {
     public void deleteById(Long id) {
         em.createQuery(String.format("delete from %s where id = %d", nameClass, id)).executeUpdate();
     }
-
 }

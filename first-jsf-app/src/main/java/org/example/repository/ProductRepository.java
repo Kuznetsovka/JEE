@@ -4,12 +4,10 @@ import org.example.persist.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import java.util.List;
 
 @Stateless
-@LocalBean
 public class ProductRepository extends Repository<Product> {
 
     public ProductRepository() {
@@ -20,8 +18,11 @@ public class ProductRepository extends Repository<Product> {
 
     public List<Product> productsByCategory(Long id) {
         return em.createNamedQuery("productsByCategory", Product.class)
-                .setParameter("id",id)
+                .setParameter("id", id)
                 .getResultList();
     }
 
+    public Product productByName(String name) {
+        return em.createQuery("select p from Product p where p.name = '" + name + "'",Product.class).getSingleResult();
+    }
 }

@@ -3,12 +3,8 @@ package org.example.controller;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import org.example.dto.CartDto;
 import org.example.dto.UserDto;
-import org.example.persist.Cart;
-import org.example.persist.Product;
-import org.example.services.CartService;
-import org.example.services.UserService;
+import org.example.service.UserService;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
@@ -29,7 +25,6 @@ public class UserController implements Serializable {
     private UserDto user;
     private UserDto selectedUser;
     private List<UserDto> users;
-    private CartDto cart;
 
     public void preloadData(ComponentSystemEvent componentSystemEvent) {
         users = userService.findAll();
@@ -66,16 +61,11 @@ public class UserController implements Serializable {
         user = (UserDto) valueChangeEvent.getNewValue();
     }
 
-    public String addToCart(Product product) {
-        // Определение юзера
-        UserDto user = userService.findById(1L);
-        Cart cart = userService.addToUserCart(product, user);
-        this.cart = new CartDto(cart);
-        return "/cart.xhtml?faces-redirect=true";
-    }
-
-    public String deleteProductFromCart(Product product) {
-        userService.deleteProductFromCart(cart, product);
-        return "/cart.xhtml?faces-redirect=true";
-    }
+//    public String addToCart(Product product) {
+//        // Определение юзера
+//        UserDto user = userService.findById(1L);
+//        Cart cart = userService.addToUserCart(product, user);
+//        this.cart = new CartDto(cart);
+//        return "/cart.xhtml?faces-redirect=true";
+//    }
 }
